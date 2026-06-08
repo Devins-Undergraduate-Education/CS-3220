@@ -1,0 +1,117 @@
+[
+    {
+        "category":  "simplest",
+        "name":  "2_2_2_100_1_3",
+        "passed":  true
+    },
+    {
+        "category":  "simplest",
+        "name":  "2_2_2_100_2_3",
+        "passed":  true
+    },
+    {
+        "category":  "simplest",
+        "name":  "2_2_2_100_3_3",
+        "passed":  true
+    },
+    {
+        "category":  "simplest",
+        "name":  "2_2_2_100_4_3",
+        "passed":  true
+    },
+    {
+        "category":  "simplest",
+        "name":  "2_2_2_100_5_3",
+        "passed":  true
+    },
+    {
+        "category":  "seeds",
+        "name":  "4_4_4_10_1_3",
+        "passed":  true
+    },
+    {
+        "category":  "seeds",
+        "name":  "4_4_4_10_2_3",
+        "passed":  true
+    },
+    {
+        "category":  "seeds",
+        "name":  "4_4_4_10_3_3",
+        "passed":  true
+    },
+    {
+        "category":  "seeds",
+        "name":  "4_4_4_10_4_3",
+        "passed":  true
+    },
+    {
+        "category":  "seeds",
+        "name":  "4_4_4_10_5_3",
+        "passed":  true
+    },
+    {
+        "category":  "mult_lat",
+        "name":  "4_4_4_10_1_2",
+        "passed":  true
+    },
+    {
+        "category":  "mult_lat",
+        "name":  "4_4_4_10_1_3",
+        "passed":  true
+    },
+    {
+        "category":  "mult_lat",
+        "name":  "4_4_4_10_1_4",
+        "passed":  true
+    },
+    {
+        "category":  "mult_lat",
+        "name":  "4_4_4_10_1_5",
+        "passed":  true
+    },
+    {
+        "category":  "mult_lat",
+        "name":  "4_4_4_10_1_6",
+        "passed":  true
+    },
+    {
+        "category":  "shapes",
+        "name":  "4_8_8_10_1_3",
+        "passed":  true
+    },
+    {
+        "category":  "shapes",
+        "name":  "8_4_4_10_1_3",
+        "passed":  true
+    },
+    {
+        "category":  "shapes",
+        "name":  "2_4_4_10_1_3",
+        "passed":  true
+    },
+    {
+        "category":  "shapes",
+        "name":  "4_2_2_10_1_3",
+        "passed":  true
+    },
+    {
+        "category":  "shapes",
+        "name":  "8_8_8_10_1_3",
+        "passed":  true
+    },
+    {
+        "category":  "num_tests",
+        "name":  "4_4_4_100_1_3",
+        "passed":  true
+    },
+    {
+        "category":  "combo",
+        "name":  "2_16_8_100_5_2",
+        "passed":  true
+    },
+    {
+        "category":  "combo",
+        "name":  "8_16_2_100_5_4",
+        "passed":  true
+    }
+]
