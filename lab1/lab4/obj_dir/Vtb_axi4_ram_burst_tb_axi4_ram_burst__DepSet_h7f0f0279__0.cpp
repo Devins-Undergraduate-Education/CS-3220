@@ -1,0 +1,2704 @@
+// Verilated -*- C++ -*-
+// DESCRIPTION: Verilator output: Design implementation internals
+// See Vtb_axi4_ram_burst.h for the primary calling header
+
+#include "Vtb_axi4_ram_burst__pch.h"
+#include "Vtb_axi4_ram_burst__Syms.h"
+#include "Vtb_axi4_ram_burst_tb_axi4_ram_burst.h"
+
+extern const VlUnpacked<CData/*0:0*/, 512> Vtb_axi4_ram_burst__ConstPool__TABLE_h6aad4286_0;
+extern const VlUnpacked<CData/*1:0*/, 512> Vtb_axi4_ram_burst__ConstPool__TABLE_hb58693dd_0;
+extern const VlUnpacked<CData/*0:0*/, 32> Vtb_axi4_ram_burst__ConstPool__TABLE_ha7522407_0;
+extern const VlUnpacked<CData/*0:0*/, 32> Vtb_axi4_ram_burst__ConstPool__TABLE_h4dc84f9e_0;
+extern const VlUnpacked<CData/*1:0*/, 32> Vtb_axi4_ram_burst__ConstPool__TABLE_he20e718b_0;
+
+VL_INLINE_OPT void Vtb_axi4_ram_burst_tb_axi4_ram_burst___nba_sequent__TOP__tb_axi4_ram_burst__0(Vtb_axi4_ram_burst_tb_axi4_ram_burst* vlSelf) {
+    if (false && vlSelf) {}  // Prevent unused
+    Vtb_axi4_ram_burst__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
+    VL_DEBUG_IF(VL_DBG_MSGF("+      Vtb_axi4_ram_burst_tb_axi4_ram_burst___nba_sequent__TOP__tb_axi4_ram_burst__0\n"); );
+    // Init
+    SData/*8:0*/ __Vtableidx1;
+    __Vtableidx1 = 0;
+    CData/*4:0*/ __Vtableidx2;
+    __Vtableidx2 = 0;
+    CData/*4:0*/ __Vtableidx3;
+    __Vtableidx3 = 0;
+    CData/*4:0*/ __Vtableidx4;
+    __Vtableidx4 = 0;
+    CData/*4:0*/ __Vtableidx5;
+    __Vtableidx5 = 0;
+    CData/*4:0*/ __Vtableidx6;
+    __Vtableidx6 = 0;
+    CData/*4:0*/ __Vtableidx7;
+    __Vtableidx7 = 0;
+    SData/*10:0*/ __Vdly__axi4_tester_inst__DOT__i1_0_reg_177;
+    __Vdly__axi4_tester_inst__DOT__i1_0_reg_177 = 0;
+    SData/*10:0*/ __Vdly__axi4_tester_inst__DOT__i2_0_reg_188;
+    __Vdly__axi4_tester_inst__DOT__i2_0_reg_188 = 0;
+    SData/*10:0*/ __Vdly__axi4_tester_inst__DOT__i_reg_301;
+    __Vdly__axi4_tester_inst__DOT__i_reg_301 = 0;
+    CData/*7:0*/ __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__wreq_throttl__DOT__genblk1__DOT__throttl_cnt;
+    __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__wreq_throttl__DOT__genblk1__DOT__throttl_cnt = 0;
+    CData/*0:0*/ __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__wreq_handling;
+    __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__wreq_handling = 0;
+    IData/*19:0*/ __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__sect_cnt;
+    __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__sect_cnt = 0;
+    CData/*0:0*/ __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__could_multi_bursts__DOT__sect_handling;
+    __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__could_multi_bursts__DOT__sect_handling = 0;
+    CData/*5:0*/ __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__could_multi_bursts__DOT__loop_cnt;
+    __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__could_multi_bursts__DOT__loop_cnt = 0;
+    CData/*7:0*/ __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__len_cnt;
+    __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__len_cnt = 0;
+    CData/*0:0*/ __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__next_resp;
+    __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__next_resp = 0;
+    CData/*0:0*/ __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq_valid;
+    __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq_valid = 0;
+    CData/*2:0*/ __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__pout;
+    __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__pout = 0;
+    QData/*63:0*/ __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__mem__v0;
+    __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__mem__v0 = 0;
+    CData/*0:0*/ __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__mem__v0;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__mem__v0 = 0;
+    QData/*63:0*/ __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__mem__v1;
+    __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__mem__v1 = 0;
+    CData/*0:0*/ __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__mem__v1;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__mem__v1 = 0;
+    QData/*63:0*/ __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__mem__v2;
+    __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__mem__v2 = 0;
+    CData/*0:0*/ __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__mem__v2;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__mem__v2 = 0;
+    QData/*63:0*/ __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__mem__v3;
+    __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__mem__v3 = 0;
+    CData/*0:0*/ __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__mem__v3;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__mem__v3 = 0;
+    QData/*63:0*/ __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__mem__v4;
+    __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__mem__v4 = 0;
+    CData/*7:0*/ __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__usedw;
+    __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__usedw = 0;
+    CData/*7:0*/ __Vdlyvdim0__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__mem__v0;
+    __Vdlyvdim0__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__mem__v0 = 0;
+    QData/*35:0*/ __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__mem__v0;
+    __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__mem__v0 = 0;
+    CData/*0:0*/ __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__mem__v0;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__mem__v0 = 0;
+    CData/*0:0*/ __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__need_wrsp;
+    __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__need_wrsp = 0;
+    CData/*3:0*/ __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__pout;
+    __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__pout = 0;
+    CData/*1:0*/ __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v0;
+    __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v0 = 0;
+    CData/*0:0*/ __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v0;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v0 = 0;
+    CData/*1:0*/ __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v1;
+    __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v1 = 0;
+    CData/*0:0*/ __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v1;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v1 = 0;
+    CData/*1:0*/ __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v2;
+    __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v2 = 0;
+    CData/*0:0*/ __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v2;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v2 = 0;
+    CData/*1:0*/ __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v3;
+    __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v3 = 0;
+    CData/*0:0*/ __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v3;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v3 = 0;
+    CData/*1:0*/ __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v4;
+    __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v4 = 0;
+    CData/*0:0*/ __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v4;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v4 = 0;
+    CData/*1:0*/ __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v5;
+    __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v5 = 0;
+    CData/*0:0*/ __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v5;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v5 = 0;
+    CData/*1:0*/ __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v6;
+    __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v6 = 0;
+    CData/*0:0*/ __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v6;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v6 = 0;
+    CData/*1:0*/ __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v7;
+    __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v7 = 0;
+    CData/*0:0*/ __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v7;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v7 = 0;
+    CData/*1:0*/ __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v8;
+    __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v8 = 0;
+    CData/*0:0*/ __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v8;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v8 = 0;
+    CData/*1:0*/ __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v9;
+    __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v9 = 0;
+    CData/*0:0*/ __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v9;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v9 = 0;
+    CData/*1:0*/ __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v10;
+    __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v10 = 0;
+    CData/*0:0*/ __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v10;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v10 = 0;
+    CData/*1:0*/ __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v11;
+    __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v11 = 0;
+    CData/*0:0*/ __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v11;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v11 = 0;
+    CData/*1:0*/ __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v12;
+    __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v12 = 0;
+    CData/*0:0*/ __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v12;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v12 = 0;
+    CData/*1:0*/ __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v13;
+    __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v13 = 0;
+    CData/*0:0*/ __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v13;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v13 = 0;
+    CData/*1:0*/ __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v14;
+    __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v14 = 0;
+    CData/*0:0*/ __Vdly__axi4_tester_inst__DOT__data_in_out_V_BVALID;
+    __Vdly__axi4_tester_inst__DOT__data_in_out_V_BVALID = 0;
+    CData/*2:0*/ __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__pout;
+    __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__pout = 0;
+    CData/*1:0*/ __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__mem__v0;
+    __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__mem__v0 = 0;
+    CData/*0:0*/ __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__mem__v0;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__mem__v0 = 0;
+    CData/*1:0*/ __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__mem__v1;
+    __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__mem__v1 = 0;
+    CData/*0:0*/ __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__mem__v1;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__mem__v1 = 0;
+    CData/*1:0*/ __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__mem__v2;
+    __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__mem__v2 = 0;
+    CData/*0:0*/ __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__mem__v2;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__mem__v2 = 0;
+    CData/*1:0*/ __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__mem__v3;
+    __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__mem__v3 = 0;
+    CData/*0:0*/ __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__mem__v3;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__mem__v3 = 0;
+    CData/*1:0*/ __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__mem__v4;
+    __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__mem__v4 = 0;
+    CData/*0:0*/ __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__burst_valid;
+    __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__burst_valid = 0;
+    CData/*2:0*/ __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__pout;
+    __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__pout = 0;
+    CData/*7:0*/ __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__mem__v0;
+    __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__mem__v0 = 0;
+    CData/*0:0*/ __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__mem__v0;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__mem__v0 = 0;
+    CData/*7:0*/ __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__mem__v1;
+    __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__mem__v1 = 0;
+    CData/*0:0*/ __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__mem__v1;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__mem__v1 = 0;
+    CData/*7:0*/ __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__mem__v2;
+    __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__mem__v2 = 0;
+    CData/*0:0*/ __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__mem__v2;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__mem__v2 = 0;
+    CData/*7:0*/ __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__mem__v3;
+    __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__mem__v3 = 0;
+    CData/*0:0*/ __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__mem__v3;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__mem__v3 = 0;
+    CData/*7:0*/ __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__mem__v4;
+    __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__mem__v4 = 0;
+    CData/*0:0*/ __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq_valid_buf;
+    __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq_valid_buf = 0;
+    CData/*0:0*/ __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rreq_handling;
+    __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rreq_handling = 0;
+    IData/*19:0*/ __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__sect_cnt;
+    __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__sect_cnt = 0;
+    CData/*0:0*/ __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__could_multi_bursts__DOT__sect_handling;
+    __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__could_multi_bursts__DOT__sect_handling = 0;
+    CData/*5:0*/ __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__could_multi_bursts__DOT__loop_cnt;
+    __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__could_multi_bursts__DOT__loop_cnt = 0;
+    CData/*0:0*/ __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq_valid;
+    __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq_valid = 0;
+    CData/*2:0*/ __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__pout;
+    __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__pout = 0;
+    QData/*63:0*/ __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__mem__v0;
+    __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__mem__v0 = 0;
+    CData/*0:0*/ __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__mem__v0;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__mem__v0 = 0;
+    QData/*63:0*/ __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__mem__v1;
+    __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__mem__v1 = 0;
+    CData/*0:0*/ __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__mem__v1;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__mem__v1 = 0;
+    QData/*63:0*/ __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__mem__v2;
+    __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__mem__v2 = 0;
+    CData/*0:0*/ __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__mem__v2;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__mem__v2 = 0;
+    QData/*63:0*/ __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__mem__v3;
+    __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__mem__v3 = 0;
+    CData/*0:0*/ __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__mem__v3;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__mem__v3 = 0;
+    QData/*63:0*/ __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__mem__v4;
+    __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__mem__v4 = 0;
+    CData/*7:0*/ __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__usedw;
+    __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__usedw = 0;
+    CData/*7:0*/ __Vdlyvdim0__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__mem__v0;
+    __Vdlyvdim0__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__mem__v0 = 0;
+    QData/*34:0*/ __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__mem__v0;
+    __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__mem__v0 = 0;
+    CData/*0:0*/ __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__mem__v0;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__mem__v0 = 0;
+    CData/*0:0*/ __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__need_rlast;
+    __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__need_rlast = 0;
+    CData/*3:0*/ __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__pout;
+    __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__pout = 0;
+    CData/*1:0*/ __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v0;
+    __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v0 = 0;
+    CData/*0:0*/ __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v0;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v0 = 0;
+    CData/*1:0*/ __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v1;
+    __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v1 = 0;
+    CData/*0:0*/ __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v1;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v1 = 0;
+    CData/*1:0*/ __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v2;
+    __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v2 = 0;
+    CData/*0:0*/ __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v2;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v2 = 0;
+    CData/*1:0*/ __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v3;
+    __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v3 = 0;
+    CData/*0:0*/ __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v3;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v3 = 0;
+    CData/*1:0*/ __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v4;
+    __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v4 = 0;
+    CData/*0:0*/ __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v4;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v4 = 0;
+    CData/*1:0*/ __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v5;
+    __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v5 = 0;
+    CData/*0:0*/ __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v5;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v5 = 0;
+    CData/*1:0*/ __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v6;
+    __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v6 = 0;
+    CData/*0:0*/ __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v6;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v6 = 0;
+    CData/*1:0*/ __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v7;
+    __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v7 = 0;
+    CData/*0:0*/ __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v7;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v7 = 0;
+    CData/*1:0*/ __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v8;
+    __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v8 = 0;
+    CData/*0:0*/ __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v8;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v8 = 0;
+    CData/*1:0*/ __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v9;
+    __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v9 = 0;
+    CData/*0:0*/ __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v9;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v9 = 0;
+    CData/*1:0*/ __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v10;
+    __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v10 = 0;
+    CData/*0:0*/ __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v10;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v10 = 0;
+    CData/*1:0*/ __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v11;
+    __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v11 = 0;
+    CData/*0:0*/ __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v11;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v11 = 0;
+    CData/*1:0*/ __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v12;
+    __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v12 = 0;
+    CData/*0:0*/ __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v12;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v12 = 0;
+    CData/*1:0*/ __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v13;
+    __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v13 = 0;
+    CData/*0:0*/ __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v13;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v13 = 0;
+    CData/*1:0*/ __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v14;
+    __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v14 = 0;
+    SData/*9:0*/ __Vdlyvdim0__axi4_tester_inst__DOT__data_from_mem_V_U__DOT__axi4_tester_data_from_mem_V_ram_U__DOT__ram__v0;
+    __Vdlyvdim0__axi4_tester_inst__DOT__data_from_mem_V_U__DOT__axi4_tester_data_from_mem_V_ram_U__DOT__ram__v0 = 0;
+    IData/*31:0*/ __Vdlyvval__axi4_tester_inst__DOT__data_from_mem_V_U__DOT__axi4_tester_data_from_mem_V_ram_U__DOT__ram__v0;
+    __Vdlyvval__axi4_tester_inst__DOT__data_from_mem_V_U__DOT__axi4_tester_data_from_mem_V_ram_U__DOT__ram__v0 = 0;
+    CData/*0:0*/ __Vdlyvset__axi4_tester_inst__DOT__data_from_mem_V_U__DOT__axi4_tester_data_from_mem_V_ram_U__DOT__ram__v0;
+    __Vdlyvset__axi4_tester_inst__DOT__data_from_mem_V_U__DOT__axi4_tester_data_from_mem_V_ram_U__DOT__ram__v0 = 0;
+    SData/*13:0*/ __Vdlyvdim0__axi_ram_inst__DOT__mem__v0;
+    __Vdlyvdim0__axi_ram_inst__DOT__mem__v0 = 0;
+    CData/*4:0*/ __Vdlyvlsb__axi_ram_inst__DOT__mem__v0;
+    __Vdlyvlsb__axi_ram_inst__DOT__mem__v0 = 0;
+    CData/*7:0*/ __Vdlyvval__axi_ram_inst__DOT__mem__v0;
+    __Vdlyvval__axi_ram_inst__DOT__mem__v0 = 0;
+    CData/*0:0*/ __Vdlyvset__axi_ram_inst__DOT__mem__v0;
+    __Vdlyvset__axi_ram_inst__DOT__mem__v0 = 0;
+    SData/*13:0*/ __Vdlyvdim0__axi_ram_inst__DOT__mem__v1;
+    __Vdlyvdim0__axi_ram_inst__DOT__mem__v1 = 0;
+    CData/*4:0*/ __Vdlyvlsb__axi_ram_inst__DOT__mem__v1;
+    __Vdlyvlsb__axi_ram_inst__DOT__mem__v1 = 0;
+    CData/*7:0*/ __Vdlyvval__axi_ram_inst__DOT__mem__v1;
+    __Vdlyvval__axi_ram_inst__DOT__mem__v1 = 0;
+    CData/*0:0*/ __Vdlyvset__axi_ram_inst__DOT__mem__v1;
+    __Vdlyvset__axi_ram_inst__DOT__mem__v1 = 0;
+    SData/*13:0*/ __Vdlyvdim0__axi_ram_inst__DOT__mem__v2;
+    __Vdlyvdim0__axi_ram_inst__DOT__mem__v2 = 0;
+    CData/*4:0*/ __Vdlyvlsb__axi_ram_inst__DOT__mem__v2;
+    __Vdlyvlsb__axi_ram_inst__DOT__mem__v2 = 0;
+    CData/*7:0*/ __Vdlyvval__axi_ram_inst__DOT__mem__v2;
+    __Vdlyvval__axi_ram_inst__DOT__mem__v2 = 0;
+    CData/*0:0*/ __Vdlyvset__axi_ram_inst__DOT__mem__v2;
+    __Vdlyvset__axi_ram_inst__DOT__mem__v2 = 0;
+    SData/*13:0*/ __Vdlyvdim0__axi_ram_inst__DOT__mem__v3;
+    __Vdlyvdim0__axi_ram_inst__DOT__mem__v3 = 0;
+    CData/*4:0*/ __Vdlyvlsb__axi_ram_inst__DOT__mem__v3;
+    __Vdlyvlsb__axi_ram_inst__DOT__mem__v3 = 0;
+    CData/*7:0*/ __Vdlyvval__axi_ram_inst__DOT__mem__v3;
+    __Vdlyvval__axi_ram_inst__DOT__mem__v3 = 0;
+    CData/*0:0*/ __Vdlyvset__axi_ram_inst__DOT__mem__v3;
+    __Vdlyvset__axi_ram_inst__DOT__mem__v3 = 0;
+    // Body
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__mem__v0 = 0U;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__mem__v1 = 0U;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__mem__v2 = 0U;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__mem__v3 = 0U;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__mem__v0 = 0U;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__mem__v1 = 0U;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__mem__v2 = 0U;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__mem__v3 = 0U;
+    __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__usedw 
+        = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__usedw;
+    __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__usedw 
+        = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__usedw;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__mem__v0 = 0U;
+    __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__len_cnt 
+        = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__len_cnt;
+    __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq_valid_buf 
+        = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq_valid_buf;
+    __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__could_multi_bursts__DOT__loop_cnt 
+        = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__could_multi_bursts__DOT__loop_cnt;
+    __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__could_multi_bursts__DOT__loop_cnt 
+        = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__could_multi_bursts__DOT__loop_cnt;
+    __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__could_multi_bursts__DOT__sect_handling 
+        = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__could_multi_bursts__DOT__sect_handling;
+    __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__could_multi_bursts__DOT__sect_handling 
+        = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__could_multi_bursts__DOT__sect_handling;
+    __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__pout 
+        = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__pout;
+    __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__need_rlast 
+        = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__need_rlast;
+    __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__pout 
+        = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__pout;
+    __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__pout 
+        = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__pout;
+    __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__pout 
+        = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__pout;
+    __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__pout 
+        = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__pout;
+    __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__pout 
+        = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__pout;
+    __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__need_wrsp 
+        = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__need_wrsp;
+    __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq_valid 
+        = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq_valid;
+    __Vdly__axi4_tester_inst__DOT__data_in_out_V_BVALID 
+        = vlSelf->__PVT__axi4_tester_inst__DOT__data_in_out_V_BVALID;
+    __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq_valid 
+        = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq_valid;
+    __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__burst_valid 
+        = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__burst_valid;
+    __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__wreq_handling 
+        = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__wreq_handling;
+    __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__sect_cnt 
+        = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__sect_cnt;
+    __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__sect_cnt 
+        = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__sect_cnt;
+    __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rreq_handling 
+        = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rreq_handling;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v0 = 0U;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v1 = 0U;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v2 = 0U;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v3 = 0U;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v4 = 0U;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v5 = 0U;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v6 = 0U;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v7 = 0U;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v8 = 0U;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v9 = 0U;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v10 = 0U;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v11 = 0U;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v12 = 0U;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v13 = 0U;
+    __Vdly__axi4_tester_inst__DOT__i_reg_301 = vlSelf->__PVT__axi4_tester_inst__DOT__i_reg_301;
+    __Vdly__axi4_tester_inst__DOT__i2_0_reg_188 = vlSelf->__PVT__axi4_tester_inst__DOT__i2_0_reg_188;
+    __Vdly__axi4_tester_inst__DOT__i1_0_reg_177 = vlSelf->__PVT__axi4_tester_inst__DOT__i1_0_reg_177;
+    __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__next_resp 
+        = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__next_resp;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__mem__v0 = 0U;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v0 = 0U;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v1 = 0U;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v2 = 0U;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v3 = 0U;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v4 = 0U;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v5 = 0U;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v6 = 0U;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v7 = 0U;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v8 = 0U;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v9 = 0U;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v10 = 0U;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v11 = 0U;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v12 = 0U;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v13 = 0U;
+    __Vdlyvset__axi4_tester_inst__DOT__data_from_mem_V_U__DOT__axi4_tester_data_from_mem_V_ram_U__DOT__ram__v0 = 0U;
+    __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__wreq_throttl__DOT__genblk1__DOT__throttl_cnt 
+        = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__wreq_throttl__DOT__genblk1__DOT__throttl_cnt;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__mem__v0 = 0U;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__mem__v1 = 0U;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__mem__v2 = 0U;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__mem__v3 = 0U;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__mem__v0 = 0U;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__mem__v1 = 0U;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__mem__v2 = 0U;
+    __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__mem__v3 = 0U;
+    __Vdlyvset__axi_ram_inst__DOT__mem__v0 = 0U;
+    __Vdlyvset__axi_ram_inst__DOT__mem__v1 = 0U;
+    __Vdlyvset__axi_ram_inst__DOT__mem__v2 = 0U;
+    __Vdlyvset__axi_ram_inst__DOT__mem__v3 = 0U;
+    vlSelf->__PVT__axi_ram_inst__DOT__i = 4U;
+    if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__push) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__i = 4U;
+        vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT____Vlvbound_hcbc101d0__0 
+            = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__mem
+            [0U];
+        __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__mem__v0 
+            = vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT____Vlvbound_hcbc101d0__0;
+        __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__mem__v0 = 1U;
+        vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT____Vlvbound_hcbc101d0__0 
+            = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__mem
+            [1U];
+        __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__mem__v1 
+            = vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT____Vlvbound_hcbc101d0__0;
+        __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__mem__v1 = 1U;
+        vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT____Vlvbound_hcbc101d0__0 
+            = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__mem
+            [2U];
+        __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__mem__v2 
+            = vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT____Vlvbound_hcbc101d0__0;
+        __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__mem__v2 = 1U;
+        vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT____Vlvbound_hcbc101d0__0 
+            = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__mem
+            [3U];
+        __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__mem__v3 
+            = vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT____Vlvbound_hcbc101d0__0;
+        __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__mem__v3 = 1U;
+        __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__mem__v4 
+            = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__rs_wreq__DOT__data_p1;
+    }
+    if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__push) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__i = 0xeU;
+        vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT____Vlvbound_h00160a68__0 
+            = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem
+            [0U];
+        __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v0 
+            = vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT____Vlvbound_h00160a68__0;
+        __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v0 = 1U;
+        vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT____Vlvbound_h00160a68__0 
+            = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem
+            [1U];
+        __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v1 
+            = vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT____Vlvbound_h00160a68__0;
+        __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v1 = 1U;
+        vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT____Vlvbound_h00160a68__0 
+            = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem
+            [2U];
+        __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v2 
+            = vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT____Vlvbound_h00160a68__0;
+        __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v2 = 1U;
+        vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT____Vlvbound_h00160a68__0 
+            = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem
+            [3U];
+        __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v3 
+            = vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT____Vlvbound_h00160a68__0;
+        __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v3 = 1U;
+        vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT____Vlvbound_h00160a68__0 
+            = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem
+            [4U];
+        __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v4 
+            = vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT____Vlvbound_h00160a68__0;
+        __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v4 = 1U;
+        vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT____Vlvbound_h00160a68__0 
+            = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem
+            [5U];
+        __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v5 
+            = vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT____Vlvbound_h00160a68__0;
+        __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v5 = 1U;
+        vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT____Vlvbound_h00160a68__0 
+            = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem
+            [6U];
+        __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v6 
+            = vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT____Vlvbound_h00160a68__0;
+        __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v6 = 1U;
+        vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT____Vlvbound_h00160a68__0 
+            = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem
+            [7U];
+        __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v7 
+            = vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT____Vlvbound_h00160a68__0;
+        __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v7 = 1U;
+        vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT____Vlvbound_h00160a68__0 
+            = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem
+            [8U];
+        __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v8 
+            = vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT____Vlvbound_h00160a68__0;
+        __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v8 = 1U;
+        vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT____Vlvbound_h00160a68__0 
+            = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem
+            [9U];
+        __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v9 
+            = vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT____Vlvbound_h00160a68__0;
+        __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v9 = 1U;
+        vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT____Vlvbound_h00160a68__0 
+            = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem
+            [0xaU];
+        __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v10 
+            = vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT____Vlvbound_h00160a68__0;
+        __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v10 = 1U;
+        vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT____Vlvbound_h00160a68__0 
+            = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem
+            [0xbU];
+        __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v11 
+            = vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT____Vlvbound_h00160a68__0;
+        __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v11 = 1U;
+        vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT____Vlvbound_h00160a68__0 
+            = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem
+            [0xcU];
+        __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v12 
+            = vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT____Vlvbound_h00160a68__0;
+        __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v12 = 1U;
+        vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT____Vlvbound_h00160a68__0 
+            = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem
+            [0xdU];
+        __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v13 
+            = vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT____Vlvbound_h00160a68__0;
+        __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v13 = 1U;
+        __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v14 
+            = ((((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__could_multi_bursts__DOT__last_loop) 
+                 & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__last_sect_buf)) 
+                << 1U) | (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__invalid_len_event_reg2));
+    }
+    if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__push) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__i = 4U;
+        vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT____Vlvbound_h8e8175aa__0 
+            = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__mem
+            [0U];
+        __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__mem__v0 
+            = vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT____Vlvbound_h8e8175aa__0;
+        __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__mem__v0 = 1U;
+        vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT____Vlvbound_h8e8175aa__0 
+            = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__mem
+            [1U];
+        __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__mem__v1 
+            = vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT____Vlvbound_h8e8175aa__0;
+        __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__mem__v1 = 1U;
+        vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT____Vlvbound_h8e8175aa__0 
+            = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__mem
+            [2U];
+        __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__mem__v2 
+            = vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT____Vlvbound_h8e8175aa__0;
+        __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__mem__v2 = 1U;
+        vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT____Vlvbound_h8e8175aa__0 
+            = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__mem
+            [3U];
+        __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__mem__v3 
+            = vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT____Vlvbound_h8e8175aa__0;
+        __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__mem__v3 = 1U;
+        __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__mem__v4 
+            = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bresp_tmp;
+    }
+    if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__push) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__i = 4U;
+        vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT____Vlvbound_hcbc101d0__0 
+            = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__mem
+            [0U];
+        __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__mem__v0 
+            = vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT____Vlvbound_hcbc101d0__0;
+        __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__mem__v0 = 1U;
+        vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT____Vlvbound_hcbc101d0__0 
+            = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__mem
+            [1U];
+        __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__mem__v1 
+            = vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT____Vlvbound_hcbc101d0__0;
+        __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__mem__v1 = 1U;
+        vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT____Vlvbound_hcbc101d0__0 
+            = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__mem
+            [2U];
+        __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__mem__v2 
+            = vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT____Vlvbound_hcbc101d0__0;
+        __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__mem__v2 = 1U;
+        vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT____Vlvbound_hcbc101d0__0 
+            = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__mem
+            [3U];
+        __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__mem__v3 
+            = vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT____Vlvbound_hcbc101d0__0;
+        __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__mem__v3 = 1U;
+        __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__mem__v4 
+            = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rs_rreq__DOT__data_p1;
+    }
+    if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__push) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__i = 0xeU;
+        vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT____Vlvbound_h00160a68__0 
+            = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem
+            [0U];
+        __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v0 
+            = vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT____Vlvbound_h00160a68__0;
+        __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v0 = 1U;
+        vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT____Vlvbound_h00160a68__0 
+            = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem
+            [1U];
+        __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v1 
+            = vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT____Vlvbound_h00160a68__0;
+        __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v1 = 1U;
+        vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT____Vlvbound_h00160a68__0 
+            = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem
+            [2U];
+        __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v2 
+            = vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT____Vlvbound_h00160a68__0;
+        __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v2 = 1U;
+        vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT____Vlvbound_h00160a68__0 
+            = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem
+            [3U];
+        __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v3 
+            = vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT____Vlvbound_h00160a68__0;
+        __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v3 = 1U;
+        vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT____Vlvbound_h00160a68__0 
+            = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem
+            [4U];
+        __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v4 
+            = vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT____Vlvbound_h00160a68__0;
+        __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v4 = 1U;
+        vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT____Vlvbound_h00160a68__0 
+            = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem
+            [5U];
+        __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v5 
+            = vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT____Vlvbound_h00160a68__0;
+        __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v5 = 1U;
+        vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT____Vlvbound_h00160a68__0 
+            = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem
+            [6U];
+        __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v6 
+            = vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT____Vlvbound_h00160a68__0;
+        __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v6 = 1U;
+        vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT____Vlvbound_h00160a68__0 
+            = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem
+            [7U];
+        __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v7 
+            = vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT____Vlvbound_h00160a68__0;
+        __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v7 = 1U;
+        vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT____Vlvbound_h00160a68__0 
+            = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem
+            [8U];
+        __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v8 
+            = vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT____Vlvbound_h00160a68__0;
+        __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v8 = 1U;
+        vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT____Vlvbound_h00160a68__0 
+            = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem
+            [9U];
+        __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v9 
+            = vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT____Vlvbound_h00160a68__0;
+        __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v9 = 1U;
+        vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT____Vlvbound_h00160a68__0 
+            = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem
+            [0xaU];
+        __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v10 
+            = vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT____Vlvbound_h00160a68__0;
+        __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v10 = 1U;
+        vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT____Vlvbound_h00160a68__0 
+            = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem
+            [0xbU];
+        __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v11 
+            = vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT____Vlvbound_h00160a68__0;
+        __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v11 = 1U;
+        vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT____Vlvbound_h00160a68__0 
+            = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem
+            [0xcU];
+        __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v12 
+            = vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT____Vlvbound_h00160a68__0;
+        __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v12 = 1U;
+        vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT____Vlvbound_h00160a68__0 
+            = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem
+            [0xdU];
+        __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v13 
+            = vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT____Vlvbound_h00160a68__0;
+        __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v13 = 1U;
+        __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v14 
+            = ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__could_multi_bursts__DOT__last_loop) 
+               << 1U);
+    }
+    if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__push) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__i = 4U;
+        vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT____Vlvbound_hb1ce6693__0 
+            = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__mem
+            [0U];
+        __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__mem__v0 
+            = vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT____Vlvbound_hb1ce6693__0;
+        __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__mem__v0 = 1U;
+        vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT____Vlvbound_hb1ce6693__0 
+            = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__mem
+            [1U];
+        __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__mem__v1 
+            = vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT____Vlvbound_hb1ce6693__0;
+        __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__mem__v1 = 1U;
+        vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT____Vlvbound_hb1ce6693__0 
+            = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__mem
+            [2U];
+        __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__mem__v2 
+            = vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT____Vlvbound_hb1ce6693__0;
+        __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__mem__v2 = 1U;
+        vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT____Vlvbound_hb1ce6693__0 
+            = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__mem
+            [3U];
+        __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__mem__v3 
+            = vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT____Vlvbound_hb1ce6693__0;
+        __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__mem__v3 = 1U;
+        __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__mem__v4 
+            = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__awlen_tmp;
+    }
+    if ((2U & vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm)) {
+        __Vdly__axi4_tester_inst__DOT__i_reg_301 = 
+            (0x7ffU & ((IData)(1U) + (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__i_0_reg_166)));
+    }
+    if (((0x400U == (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__i1_0_reg_177)) 
+         & (vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm 
+            >> 0xaU))) {
+        __Vdly__axi4_tester_inst__DOT__i2_0_reg_188 = 0U;
+    } else if (((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__icmp_ln883_fu_292_p2) 
+                & (vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm 
+                   >> 0x16U))) {
+        __Vdly__axi4_tester_inst__DOT__i2_0_reg_188 
+            = vlSelf->__PVT__axi4_tester_inst__DOT__i_2_reg_359;
+    }
+    __Vtableidx1 = (((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bresp_tmp) 
+                     << 7U) | (((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__resp_ready) 
+                                << 6U) | (((IData)(vlSelf->__PVT__axi_ram_inst__DOT__s_axi_bvalid_reg) 
+                                           << 5U) | 
+                                          (((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__next_resp) 
+                                            << 2U) 
+                                           | (((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__resp_match) 
+                                               << 1U) 
+                                              | (IData)(vlSymsp->TOP.reset))))));
+    if (Vtb_axi4_ram_burst__ConstPool__TABLE_h6aad4286_0
+        [__Vtableidx1]) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bresp_tmp 
+            = Vtb_axi4_ram_burst__ConstPool__TABLE_hb58693dd_0
+            [__Vtableidx1];
+    }
+    if (((0x400U == (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__i_0_reg_166)) 
+         & (vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm 
+            >> 1U))) {
+        __Vdly__axi4_tester_inst__DOT__i1_0_reg_177 = 0U;
+    } else if ((0x100000U & vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm)) {
+        __Vdly__axi4_tester_inst__DOT__i1_0_reg_177 
+            = vlSelf->__PVT__axi4_tester_inst__DOT__i_1_reg_330;
+    }
+    __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__next_resp 
+        = ((1U & (~ (IData)(vlSymsp->TOP.reset))) && 
+           (((IData)(vlSelf->__PVT__axi_ram_inst__DOT__s_axi_bvalid_reg) 
+             & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__resp_ready)) 
+            | (((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__aw2b_bdata) 
+                & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__need_wrsp)) 
+               & (~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__next_resp)))));
+    if (vlSelf->__PVT__axi4_tester_inst__DOT__data_from_mem_V_ce0) {
+        if ((0x100000U & vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm)) {
+            __Vdlyvval__axi4_tester_inst__DOT__data_from_mem_V_U__DOT__axi4_tester_data_from_mem_V_ram_U__DOT__ram__v0 
+                = vlSelf->__PVT__axi4_tester_inst__DOT__data_in_out_V_addr_1_1_reg_351;
+            __Vdlyvset__axi4_tester_inst__DOT__data_from_mem_V_U__DOT__axi4_tester_data_from_mem_V_ram_U__DOT__ram__v0 = 1U;
+            __Vdlyvdim0__axi4_tester_inst__DOT__data_from_mem_V_U__DOT__axi4_tester_data_from_mem_V_ram_U__DOT__ram__v0 
+                = vlSelf->__PVT__axi4_tester_inst__DOT__data_from_mem_V_address0;
+        }
+        vlSelf->__PVT__axi4_tester_inst__DOT__data_from_mem_V_q0 
+            = vlSelf->__PVT__axi4_tester_inst__DOT__data_from_mem_V_U__DOT__axi4_tester_data_from_mem_V_ram_U__DOT__ram
+            [vlSelf->__PVT__axi4_tester_inst__DOT__data_from_mem_V_address0];
+    }
+    if (((IData)(vlSelf->__PVT__axi_ram_inst__DOT__mem_wr_en) 
+         & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__strb_buf))) {
+        __Vdlyvval__axi_ram_inst__DOT__mem__v0 = (0xffU 
+                                                  & vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__data_buf);
+        __Vdlyvset__axi_ram_inst__DOT__mem__v0 = 1U;
+        __Vdlyvlsb__axi_ram_inst__DOT__mem__v0 = 0U;
+        __Vdlyvdim0__axi_ram_inst__DOT__mem__v0 = (0x3fffU 
+                                                   & ((IData)(vlSelf->__PVT__axi_ram_inst__DOT__write_addr_reg) 
+                                                      >> 2U));
+    }
+    if (((IData)(vlSelf->__PVT__axi_ram_inst__DOT__mem_wr_en) 
+         & ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__strb_buf) 
+            >> 1U))) {
+        __Vdlyvval__axi_ram_inst__DOT__mem__v1 = (0xffU 
+                                                  & (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__data_buf 
+                                                     >> 8U));
+        __Vdlyvset__axi_ram_inst__DOT__mem__v1 = 1U;
+        __Vdlyvlsb__axi_ram_inst__DOT__mem__v1 = 8U;
+        __Vdlyvdim0__axi_ram_inst__DOT__mem__v1 = (0x3fffU 
+                                                   & ((IData)(vlSelf->__PVT__axi_ram_inst__DOT__write_addr_reg) 
+                                                      >> 2U));
+    }
+    if (((IData)(vlSelf->__PVT__axi_ram_inst__DOT__mem_wr_en) 
+         & ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__strb_buf) 
+            >> 2U))) {
+        __Vdlyvval__axi_ram_inst__DOT__mem__v2 = (0xffU 
+                                                  & (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__data_buf 
+                                                     >> 0x10U));
+        __Vdlyvset__axi_ram_inst__DOT__mem__v2 = 1U;
+        __Vdlyvlsb__axi_ram_inst__DOT__mem__v2 = 0x10U;
+        __Vdlyvdim0__axi_ram_inst__DOT__mem__v2 = (0x3fffU 
+                                                   & ((IData)(vlSelf->__PVT__axi_ram_inst__DOT__write_addr_reg) 
+                                                      >> 2U));
+    }
+    if (((IData)(vlSelf->__PVT__axi_ram_inst__DOT__mem_wr_en) 
+         & ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__strb_buf) 
+            >> 3U))) {
+        __Vdlyvval__axi_ram_inst__DOT__mem__v3 = (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__data_buf 
+                                                  >> 0x18U);
+        __Vdlyvset__axi_ram_inst__DOT__mem__v3 = 1U;
+        __Vdlyvlsb__axi_ram_inst__DOT__mem__v3 = 0x18U;
+        __Vdlyvdim0__axi_ram_inst__DOT__mem__v3 = (0x3fffU 
+                                                   & ((IData)(vlSelf->__PVT__axi_ram_inst__DOT__write_addr_reg) 
+                                                      >> 2U));
+    }
+    vlSelf->__PVT__axi_ram_inst__DOT__s_axi_bid_reg 
+        = vlSelf->__PVT__axi_ram_inst__DOT__s_axi_bid_next;
+    vlSelf->__PVT__axi_ram_inst__DOT__read_id_reg = vlSelf->__PVT__axi_ram_inst__DOT__read_id_next;
+    vlSelf->__PVT__axi_ram_inst__DOT__read_size_reg 
+        = vlSelf->__PVT__axi_ram_inst__DOT__read_size_next;
+    vlSelf->__PVT__axi_ram_inst__DOT__read_burst_reg 
+        = vlSelf->__PVT__axi_ram_inst__DOT__read_burst_next;
+    vlSelf->__PVT__axi_ram_inst__DOT__write_size_reg 
+        = vlSelf->__PVT__axi_ram_inst__DOT__write_size_next;
+    vlSelf->__PVT__axi_ram_inst__DOT__write_burst_reg 
+        = vlSelf->__PVT__axi_ram_inst__DOT__write_burst_next;
+    vlSelf->__PVT__axi_ram_inst__DOT__write_id_reg 
+        = vlSelf->__PVT__axi_ram_inst__DOT__write_id_next;
+    vlSelf->__PVT__axi_ram_inst__DOT__read_count_reg 
+        = vlSelf->__PVT__axi_ram_inst__DOT__read_count_next;
+    vlSelf->__PVT__axi_ram_inst__DOT__write_count_reg 
+        = vlSelf->__PVT__axi_ram_inst__DOT__write_count_next;
+    vlSelf->__PVT__axi_ram_inst__DOT__read_state_reg 
+        = vlSelf->__PVT__axi_ram_inst__DOT__read_state_next;
+    vlSelf->__PVT__axi_ram_inst__DOT__write_state_reg 
+        = vlSelf->__PVT__axi_ram_inst__DOT__write_state_next;
+    vlSelf->__PVT__axi4_tester_inst__DOT__zext_ln22_reg_335 
+        = (0x7ffULL & vlSelf->__PVT__axi4_tester_inst__DOT__zext_ln22_reg_335);
+    if (((0x400U != (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__i1_0_reg_177)) 
+         & (vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm 
+            >> 0xaU))) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__zext_ln22_reg_335 
+            = ((0xfffffffffffff800ULL & vlSelf->__PVT__axi4_tester_inst__DOT__zext_ln22_reg_335) 
+               | (IData)((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__i1_0_reg_177)));
+    }
+    if (((0x400U == (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__i2_0_reg_188)) 
+         & (vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm 
+            >> 0x15U))) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__storemerge_reg_199 = 1U;
+    } else if ((1U & ((~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__icmp_ln883_fu_292_p2)) 
+                      & (vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm 
+                         >> 0x16U)))) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__storemerge_reg_199 = 0U;
+    }
+    if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__next_beat) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__bus_equal_gen__DOT__data_buf 
+            = (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__dout_buf);
+    }
+    if ((1U & ((~ (IData)(vlSelf->__PVT__axi_ram_inst__DOT__s_axi_rvalid_pipe_reg)) 
+               | (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__full_n)))) {
+        vlSelf->__PVT__axi_ram_inst__DOT__s_axi_rid_pipe_reg 
+            = vlSelf->__PVT__axi_ram_inst__DOT__s_axi_rid_reg;
+        vlSelf->__PVT__axi_ram_inst__DOT__s_axi_rdata_pipe_reg 
+            = vlSelf->__PVT__axi_ram_inst__DOT__s_axi_rdata_reg;
+        vlSelf->__PVT__axi_ram_inst__DOT__s_axi_rlast_pipe_reg 
+            = vlSelf->__PVT__axi_ram_inst__DOT__s_axi_rlast_reg;
+        vlSelf->__PVT__axi_ram_inst__DOT__s_axi_rvalid_pipe_reg 
+            = vlSelf->__PVT__axi_ram_inst__DOT__s_axi_rvalid_reg;
+    }
+    if (vlSymsp->TOP.reset) {
+        __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__usedw = 0U;
+        __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__usedw = 0U;
+        __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__len_cnt = 0U;
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__len_cnt 
+            = __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__len_cnt;
+        __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq_valid_buf = 0U;
+        __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__could_multi_bursts__DOT__loop_cnt = 0U;
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__could_multi_bursts__DOT__loop_cnt 
+            = __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__could_multi_bursts__DOT__loop_cnt;
+        __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__could_multi_bursts__DOT__loop_cnt = 0U;
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__could_multi_bursts__DOT__loop_cnt 
+            = __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__could_multi_bursts__DOT__loop_cnt;
+        __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__could_multi_bursts__DOT__sect_handling = 0U;
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__could_multi_bursts__DOT__sect_handling 
+            = __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__could_multi_bursts__DOT__sect_handling;
+        __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__could_multi_bursts__DOT__sect_handling = 0U;
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__could_multi_bursts__DOT__sect_handling 
+            = __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__could_multi_bursts__DOT__sect_handling;
+        __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__pout = 0U;
+        __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__need_rlast = 0U;
+        __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__pout = 0U;
+        __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__pout = 0U;
+        __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__pout = 0U;
+        __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__pout = 0U;
+        __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__pout = 0U;
+        __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__need_wrsp = 0U;
+        __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq_valid = 0U;
+        __Vdly__axi4_tester_inst__DOT__data_in_out_V_BVALID = 0U;
+        __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq_valid = 0U;
+        __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__burst_valid = 0U;
+        __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__wreq_handling = 0U;
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__wreq_handling 
+            = __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__wreq_handling;
+        __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__sect_cnt = 0U;
+        __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__sect_cnt = 0U;
+        __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rreq_handling = 0U;
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rreq_handling 
+            = __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rreq_handling;
+        __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__wreq_throttl__DOT__genblk1__DOT__throttl_cnt = 0U;
+    } else {
+        if (((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__push) 
+             & (~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__pop)))) {
+            __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__usedw 
+                = (0xffU & ((IData)(1U) + (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__usedw)));
+        } else if (((~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__push)) 
+                    & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__pop))) {
+            __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__usedw 
+                = (0xffU & ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__usedw) 
+                            - (IData)(1U)));
+        }
+        if (((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__push) 
+             & (~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__pop)))) {
+            __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__usedw 
+                = (0xffU & ((IData)(1U) + (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__usedw)));
+        } else if (((~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__push)) 
+                    & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__pop))) {
+            __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__usedw 
+                = (0xffU & ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__usedw) 
+                            - (IData)(1U)));
+        }
+        if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__next_burst) {
+            __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__len_cnt = 0U;
+        } else if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__next_data) {
+            __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__len_cnt 
+                = (0xffU & ((IData)(1U) + (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__len_cnt)));
+        }
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__len_cnt 
+            = __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__len_cnt;
+        if ((((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq_valid) 
+              | (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq_valid_buf)) 
+             & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__ready_for_rreq))) {
+            __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq_valid_buf 
+                = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq_valid;
+        }
+        if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__next_sect) {
+            __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__could_multi_bursts__DOT__loop_cnt = 0U;
+        } else if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl_r) {
+            __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__could_multi_bursts__DOT__loop_cnt 
+                = (0x3fU & ((IData)(1U) + (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__could_multi_bursts__DOT__loop_cnt)));
+        }
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__could_multi_bursts__DOT__loop_cnt 
+            = __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__could_multi_bursts__DOT__loop_cnt;
+        if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__next_sect) {
+            __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__could_multi_bursts__DOT__loop_cnt = 0U;
+        } else if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_w) {
+            __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__could_multi_bursts__DOT__loop_cnt 
+                = (0x3fU & ((IData)(1U) + (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__could_multi_bursts__DOT__loop_cnt)));
+        }
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__could_multi_bursts__DOT__loop_cnt 
+            = __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__could_multi_bursts__DOT__loop_cnt;
+        if (((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rreq_handling) 
+             & (~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__could_multi_bursts__DOT__sect_handling)))) {
+            __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__could_multi_bursts__DOT__sect_handling = 1U;
+        } else if ((((~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rreq_handling)) 
+                     & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__could_multi_bursts__DOT__last_loop)) 
+                    & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl_r))) {
+            __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__could_multi_bursts__DOT__sect_handling = 0U;
+        }
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__could_multi_bursts__DOT__sect_handling 
+            = __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__could_multi_bursts__DOT__sect_handling;
+        if (((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__wreq_handling) 
+             & (~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__could_multi_bursts__DOT__sect_handling)))) {
+            __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__could_multi_bursts__DOT__sect_handling = 1U;
+        } else if ((((~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__wreq_handling)) 
+                     & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__could_multi_bursts__DOT__last_loop)) 
+                    & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_w))) {
+            __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__could_multi_bursts__DOT__sect_handling = 0U;
+        }
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__could_multi_bursts__DOT__sect_handling 
+            = __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__could_multi_bursts__DOT__sect_handling;
+        if ((((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__push) 
+              & (~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__pop))) 
+             & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__data_vld))) {
+            __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__pout 
+                = (0xfU & ((IData)(1U) + (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__pout)));
+        } else if ((((~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__push)) 
+                     & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__pop)) 
+                    & (0U != (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__pout)))) {
+            __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__pout 
+                = (0xfU & ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__pout) 
+                           - (IData)(1U)));
+        }
+        if ((1U & (~ ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__need_rlast) 
+                      & (~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__tmp_last_2)))))) {
+            __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__need_rlast 
+                = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__data_vld;
+        }
+        if ((((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__push) 
+              & (~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__pop))) 
+             & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__data_vld))) {
+            __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__pout 
+                = (7U & ((IData)(1U) + (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__pout)));
+        } else if ((((~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__push)) 
+                     & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__pop)) 
+                    & (0U != (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__pout)))) {
+            __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__pout 
+                = (7U & ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__pout) 
+                         - (IData)(1U)));
+        }
+        if ((((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__push) 
+              & (~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__pop))) 
+             & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__data_vld))) {
+            __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__pout 
+                = (7U & ((IData)(1U) + (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__pout)));
+        } else if ((((~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__push)) 
+                     & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__pop)) 
+                    & (0U != (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__pout)))) {
+            __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__pout 
+                = (7U & ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__pout) 
+                         - (IData)(1U)));
+        }
+        if ((((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__push) 
+              & (~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__pop))) 
+             & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__data_vld))) {
+            __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__pout 
+                = (0xfU & ((IData)(1U) + (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__pout)));
+        } else if ((((~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__push)) 
+                     & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__pop)) 
+                    & (0U != (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__pout)))) {
+            __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__pout 
+                = (0xfU & ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__pout) 
+                           - (IData)(1U)));
+        }
+        if ((((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__push) 
+              & (~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__pop))) 
+             & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__data_vld))) {
+            __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__pout 
+                = (7U & ((IData)(1U) + (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__pout)));
+        } else if ((((~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__push)) 
+                     & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__pop)) 
+                    & (0U != (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__pout)))) {
+            __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__pout 
+                = (7U & ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__pout) 
+                         - (IData)(1U)));
+        }
+        if ((((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__push) 
+              & (~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__pop))) 
+             & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__data_vld))) {
+            __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__pout 
+                = (7U & ((IData)(1U) + (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__pout)));
+        } else if ((((~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__push)) 
+                     & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__pop)) 
+                    & (0U != (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__pout)))) {
+            __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__pout 
+                = (7U & ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__pout) 
+                         - (IData)(1U)));
+        }
+        if ((1U & (~ ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__need_wrsp) 
+                      & (~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__next_resp)))))) {
+            __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__need_wrsp 
+                = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__data_vld;
+        }
+        if ((1U & (~ ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq_valid) 
+                      & (~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq_read)))))) {
+            __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq_valid 
+                = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__data_vld;
+        }
+        if ((1U & (~ ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__data_in_out_V_BVALID) 
+                      & (~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__data_in_out_V_BREADY)))))) {
+            __Vdly__axi4_tester_inst__DOT__data_in_out_V_BVALID 
+                = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__data_vld;
+        }
+        if ((1U & (~ ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq_valid) 
+                      & (~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq_read)))))) {
+            __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq_valid 
+                = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__data_vld;
+        }
+        if ((1U & (~ ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__burst_valid) 
+                      & (~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__next_burst)))))) {
+            __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__burst_valid 
+                = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__data_vld;
+        }
+        if (((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq_valid_buf) 
+             & (~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__wreq_handling)))) {
+            __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__wreq_handling = 1U;
+        } else if ((((~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq_valid_buf)) 
+                     & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__last_sect)) 
+                    & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__next_sect))) {
+            __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__wreq_handling = 0U;
+        }
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__wreq_handling 
+            = __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__wreq_handling;
+        if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq_read) {
+            __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__sect_cnt 
+                = (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__start_addr 
+                   >> 0xcU);
+        } else if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__next_sect) {
+            __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__sect_cnt 
+                = (0xfffffU & ((IData)(1U) + vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__sect_cnt));
+        }
+        if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq_read) {
+            __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__sect_cnt 
+                = (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__start_addr 
+                   >> 0xcU);
+        } else if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__next_sect) {
+            __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__sect_cnt 
+                = (0xfffffU & ((IData)(1U) + vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__sect_cnt));
+        }
+        if ((((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq_valid_buf) 
+              & (~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rreq_handling))) 
+             & (~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__invalid_len_event)))) {
+            __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rreq_handling = 1U;
+        } else if (((((~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq_valid_buf)) 
+                      | (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__invalid_len_event)) 
+                     & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__last_sect)) 
+                    & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__next_sect))) {
+            __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rreq_handling = 0U;
+        }
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rreq_handling 
+            = __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rreq_handling;
+        if (((((0U < (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__could_multi_bursts__DOT__awlen_buf)) 
+               & (0U == (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__wreq_throttl__DOT__genblk1__DOT__throttl_cnt))) 
+              & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__AWVALID_Dummy)) 
+             & (IData)(vlSelf->__PVT__axi_ram_inst__DOT__s_axi_awready_reg))) {
+            __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__wreq_throttl__DOT__genblk1__DOT__throttl_cnt 
+                = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__could_multi_bursts__DOT__awlen_buf;
+        } else if (((0U < (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__wreq_throttl__DOT__genblk1__DOT__throttl_cnt)) 
+                    & ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__WVALID_Dummy) 
+                       & (IData)(vlSelf->__PVT__axi_ram_inst__DOT__s_axi_wready_reg)))) {
+            __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__wreq_throttl__DOT__genblk1__DOT__throttl_cnt 
+                = (0xffU & ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__wreq_throttl__DOT__genblk1__DOT__throttl_cnt) 
+                            - (IData)(1U)));
+        }
+    }
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__wreq_throttl__DOT__genblk1__DOT__throttl_cnt 
+        = __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__wreq_throttl__DOT__genblk1__DOT__throttl_cnt;
+    if (__Vdlyvset__axi4_tester_inst__DOT__data_from_mem_V_U__DOT__axi4_tester_data_from_mem_V_ram_U__DOT__ram__v0) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__data_from_mem_V_U__DOT__axi4_tester_data_from_mem_V_ram_U__DOT__ram[__Vdlyvdim0__axi4_tester_inst__DOT__data_from_mem_V_U__DOT__axi4_tester_data_from_mem_V_ram_U__DOT__ram__v0] 
+            = __Vdlyvval__axi4_tester_inst__DOT__data_from_mem_V_U__DOT__axi4_tester_data_from_mem_V_ram_U__DOT__ram__v0;
+    }
+    if (vlSymsp->TOP.reset) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__raddr = 0U;
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__raddr = 0U;
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__empty_n = 0U;
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__empty_n = 0U;
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__ar2r_rdata = 0U;
+    } else {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__raddr 
+            = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__rnext;
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__raddr 
+            = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__rnext;
+        if (((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__push) 
+             & (~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__pop)))) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__empty_n = 1U;
+        } else if (((~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__push)) 
+                    & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__pop))) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__empty_n 
+                = (1U != (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__usedw));
+        }
+        if (((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__push) 
+             & (~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__pop)))) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__empty_n = 1U;
+        } else if (((~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__push)) 
+                    & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__pop))) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__empty_n 
+                = (1U != (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__usedw));
+        }
+        if ((1U & (~ ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__need_rlast) 
+                      & (~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__tmp_last_2)))))) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__ar2r_rdata 
+                = ((0xeU >= (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__pout))
+                    ? vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem
+                   [vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__pout]
+                    : (IData)(vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT____Vxrand_h8d9647ad__0));
+        }
+    }
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__need_rlast 
+        = __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__need_rlast;
+    if (__Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v0) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem[1U] 
+            = __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v0;
+    }
+    if (__Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v1) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem[2U] 
+            = __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v1;
+    }
+    if (__Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v2) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem[3U] 
+            = __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v2;
+    }
+    if (__Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v3) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem[4U] 
+            = __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v3;
+    }
+    if (__Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v4) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem[5U] 
+            = __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v4;
+    }
+    if (__Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v5) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem[6U] 
+            = __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v5;
+    }
+    if (__Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v6) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem[7U] 
+            = __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v6;
+    }
+    if (__Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v7) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem[8U] 
+            = __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v7;
+    }
+    if (__Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v8) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem[9U] 
+            = __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v8;
+    }
+    if (__Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v9) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem[0xaU] 
+            = __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v9;
+    }
+    if (__Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v10) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem[0xbU] 
+            = __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v10;
+    }
+    if (__Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v11) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem[0xcU] 
+            = __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v11;
+    }
+    if (__Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v12) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem[0xdU] 
+            = __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v12;
+    }
+    if (__Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v13) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem[0xeU] 
+            = __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v13;
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem[0U] 
+            = __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__mem__v14;
+    }
+    if (vlSymsp->TOP.reset) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__data_in_out_V_BRESP = 0U;
+    } else if ((1U & (~ ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__data_in_out_V_BVALID) 
+                         & (~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__data_in_out_V_BREADY)))))) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__data_in_out_V_BRESP 
+            = ((4U >= (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__pout))
+                ? vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__mem
+               [vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__pout]
+                : (IData)(vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT____Vxrand_h8d9647ad__0));
+    }
+    if (__Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__mem__v0) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__mem[1U] 
+            = __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__mem__v0;
+    }
+    if (__Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__mem__v1) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__mem[2U] 
+            = __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__mem__v1;
+    }
+    if (__Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__mem__v2) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__mem[3U] 
+            = __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__mem__v2;
+    }
+    if (__Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__mem__v3) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__mem[4U] 
+            = __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__mem__v3;
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__mem[0U] 
+            = __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__mem__v4;
+    }
+    if (vlSymsp->TOP.reset) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__could_multi_bursts__DOT__araddr_buf = 0U;
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__could_multi_bursts__DOT__awaddr_buf = 0U;
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__full_n = 1U;
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__burst_len = 0U;
+    } else {
+        if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl_r) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__could_multi_bursts__DOT__araddr_buf 
+                = (0xfffffffcU & vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__araddr_tmp);
+        }
+        if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_w) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__could_multi_bursts__DOT__awaddr_buf 
+                = (0xfffffffcU & vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__awaddr_tmp);
+        }
+        if (((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__push) 
+             & (~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__pop)))) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__full_n 
+                = (0xffU != (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__usedw));
+        } else if (((~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__push)) 
+                    & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__pop))) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__full_n = 1U;
+        }
+        if ((1U & (~ ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__burst_valid) 
+                      & (~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__next_burst)))))) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__burst_len 
+                = ((4U >= (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__pout))
+                    ? vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__mem
+                   [vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__pout]
+                    : (IData)(vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT____Vxrand_h8d94df49__0));
+        }
+    }
+    if (__Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__mem__v0) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__mem[1U] 
+            = __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__mem__v0;
+    }
+    if (__Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__mem__v1) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__mem[2U] 
+            = __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__mem__v1;
+    }
+    if (__Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__mem__v2) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__mem[3U] 
+            = __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__mem__v2;
+    }
+    if (__Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__mem__v3) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__mem[4U] 
+            = __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__mem__v3;
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__mem[0U] 
+            = __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__mem__v4;
+    }
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__burst_valid 
+        = __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__burst_valid;
+    if (vlSymsp->TOP.reset) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__dout_valid = 0U;
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__dout_valid = 0U;
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__WLAST_Dummy = 0U;
+        vlSelf->__PVT__axi_ram_inst__DOT__read_state_reg = 0U;
+        vlSelf->__PVT__axi_ram_inst__DOT__write_state_reg = 0U;
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl_ready = 1U;
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_ready = 1U;
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_burst_ready = 1U;
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__resp_buf = 0U;
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__sect_addr_buf = 0U;
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__sect_cnt 
+            = __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__sect_cnt;
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__sect_addr_buf = 0U;
+    } else {
+        if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__pop) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__dout_valid = 1U;
+        } else if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__next_data) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__dout_valid = 0U;
+        }
+        if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__pop) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__dout_valid = 1U;
+        } else if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__next_beat) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__dout_valid = 0U;
+        }
+        if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__next_burst) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__WLAST_Dummy = 1U;
+        } else if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__ready_for_data) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__WLAST_Dummy = 0U;
+        }
+        if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__pop) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl_ready = 1U;
+        } else if (((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__push) 
+                    & ((~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__pop)) 
+                       & ((0xdU == (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__pout)) 
+                          & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__data_vld))))) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl_ready = 0U;
+        }
+        if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__pop) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_ready = 1U;
+        } else if (((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__push) 
+                    & ((~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__pop)) 
+                       & ((0xdU == (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__pout)) 
+                          & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__data_vld))))) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_ready = 0U;
+        }
+        if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__pop) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_burst_ready = 1U;
+        } else if (((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__push) 
+                    & ((~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__pop)) 
+                       & ((3U == (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__pout)) 
+                          & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__data_vld))))) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_burst_ready = 0U;
+        }
+        if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__next_beat) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__resp_buf 
+                = (3U & (IData)((vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__dout_buf 
+                                 >> 0x20U)));
+        }
+        if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__next_sect) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__sect_addr_buf 
+                = ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__first_sect)
+                    ? vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__start_addr_buf
+                    : (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__sect_cnt 
+                       << 0xcU));
+        }
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__sect_cnt 
+            = __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__sect_cnt;
+        if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__next_sect) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__sect_addr_buf 
+                = ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__first_sect)
+                    ? vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__start_addr_buf
+                    : (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__sect_cnt 
+                       << 0xcU));
+        }
+    }
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__sect_cnt 
+        = __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__sect_cnt;
+    if ((0x400U & vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm)) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__i_1_reg_330 
+            = (0x7ffU & ((IData)(1U) + (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__i1_0_reg_177)));
+    }
+    vlSelf->__PVT__axi_ram_inst__DOT__s_axi_bvalid_reg 
+        = vlSelf->__PVT__axi_ram_inst__DOT__s_axi_bvalid_next;
+    if ((1U & ((vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm 
+                >> 0x13U) & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rs_rdata__DOT__state)))) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__data_in_out_V_addr_1_1_reg_351 
+            = (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rs_rdata__DOT__data_p1);
+    }
+    vlSelf->__PVT__axi_ram_inst__DOT__s_axi_wready_reg 
+        = vlSelf->__PVT__axi_ram_inst__DOT__s_axi_wready_next;
+    vlSelf->__PVT__axi_ram_inst__DOT__s_axi_awready_reg 
+        = vlSelf->__PVT__axi_ram_inst__DOT__s_axi_awready_next;
+    if ((((2U == (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rs_rreq__DOT__state)) 
+          & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__data_in_out_V_ARVALID)) 
+         | (((3U == (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rs_rreq__DOT__state)) 
+             & ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rs2f_rreq_ack) 
+                & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__data_in_out_V_ARVALID))) 
+            | ((1U == (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rs_rreq__DOT__state)) 
+               & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rs2f_rreq_ack))))) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rs_rreq__DOT__data_p1 
+            = ((1U == (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rs_rreq__DOT__state))
+                ? vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rs_rreq__DOT__data_p2
+                : (0x100000000ULL | (QData)((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__reg_213))));
+    }
+    if ((((2U == (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__rs_wreq__DOT__state)) 
+          & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__data_in_out_V_AWVALID)) 
+         | (((3U == (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__rs_wreq__DOT__state)) 
+             & ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__rs2f_wreq_ack) 
+                & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__data_in_out_V_AWVALID))) 
+            | ((1U == (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__rs_wreq__DOT__state)) 
+               & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__rs2f_wreq_ack))))) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__rs_wreq__DOT__data_p1 
+            = ((1U == (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__rs_wreq__DOT__state))
+                ? vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__rs_wreq__DOT__data_p2
+                : (0x100000000ULL | (QData)((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__reg_213))));
+    }
+    vlSelf->__PVT__axi_ram_inst__DOT__write_addr_reg 
+        = vlSelf->__PVT__axi_ram_inst__DOT__write_addr_next;
+    if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__next_data) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__data_buf 
+            = (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__dout_buf);
+    }
+    vlSelf->correct_V = vlSelf->__PVT__axi4_tester_inst__DOT__storemerge_reg_199;
+    vlSelf->__PVT__axi_ram_inst__DOT__s_axi_rid_reg 
+        = vlSelf->__PVT__axi_ram_inst__DOT__s_axi_rid_next;
+    vlSelf->__PVT__axi_ram_inst__DOT__s_axi_rlast_reg 
+        = vlSelf->__PVT__axi_ram_inst__DOT__s_axi_rlast_next;
+    if (vlSelf->__PVT__axi_ram_inst__DOT__mem_rd_en) {
+        vlSelf->__PVT__axi_ram_inst__DOT__s_axi_rdata_reg 
+            = vlSelf->__PVT__axi_ram_inst__DOT__mem
+            [(0x3fffU & ((IData)(vlSelf->__PVT__axi_ram_inst__DOT__read_addr_reg) 
+                         >> 2U))];
+    }
+    vlSelf->__PVT__axi_ram_inst__DOT__s_axi_rvalid_reg 
+        = vlSelf->__PVT__axi_ram_inst__DOT__s_axi_rvalid_next;
+    if (vlSymsp->TOP.reset) {
+        vlSelf->__PVT__axi_ram_inst__DOT__s_axi_rvalid_pipe_reg = 0U;
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__sect_end_buf = 0U;
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__sect_end_buf = 0U;
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__ARVALID_Dummy = 0U;
+    } else {
+        if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__next_sect) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__sect_end_buf 
+                = ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__last_sect)
+                    ? (3U & vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__end_addr_buf)
+                    : 3U);
+        }
+        if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__next_sect) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__sect_end_buf 
+                = ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__last_sect)
+                    ? (3U & vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__end_addr_buf)
+                    : 3U);
+        }
+        if (((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl_r) 
+             & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__invalid_len_event_reg2))) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__ARVALID_Dummy = 0U;
+        } else if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl_r) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__ARVALID_Dummy = 1U;
+        } else if (((~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl_r)) 
+                    & (IData)(vlSelf->__PVT__axi_ram_inst__DOT__s_axi_arready_reg))) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__ARVALID_Dummy = 0U;
+        }
+    }
+    vlSelf->__PVT__axi_ram_inst__DOT__s_axi_arready_reg 
+        = vlSelf->__PVT__axi_ram_inst__DOT__s_axi_arready_next;
+    if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__push) {
+        __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__mem__v0 
+            = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rresp_rdata;
+        __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__mem__v0 = 1U;
+        __Vdlyvdim0__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__mem__v0 
+            = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__waddr;
+    }
+    if (vlSymsp->TOP.reset) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__sect_len_buf = 0U;
+    } else if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__next_sect) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__sect_len_buf 
+            = (0x3ffU & (((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__first_sect) 
+                          & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__last_sect))
+                          ? (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__beat_len_buf)
+                          : (((~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__last_sect)) 
+                              & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__first_sect))
+                              ? ((IData)(0x3ffU) - 
+                                 (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__start_addr_buf 
+                                  >> 2U)) : (((~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__first_sect)) 
+                                              & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__last_sect))
+                                              ? (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__end_addr_buf 
+                                                 >> 2U)
+                                              : 0x3ffU))));
+    }
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__could_multi_bursts__DOT__last_loop 
+        = ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__could_multi_bursts__DOT__loop_cnt) 
+           == (0x3fU & ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__sect_len_buf) 
+                        >> 4U)));
+    if (vlSymsp->TOP.reset) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__could_multi_bursts__DOT__arlen_buf = 0U;
+    } else if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl_r) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__could_multi_bursts__DOT__arlen_buf 
+            = ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__could_multi_bursts__DOT__last_loop)
+                ? (0xfU & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__sect_len_buf))
+                : 0xfU);
+    }
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__araddr_tmp 
+        = ((0U == (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__could_multi_bursts__DOT__loop_cnt))
+            ? vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__sect_addr_buf
+            : (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__could_multi_bursts__DOT__araddr_buf 
+               + VL_SHIFTL_III(32,32,32, ((IData)(1U) 
+                                          + (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__could_multi_bursts__DOT__arlen_buf)), 2U)));
+    if (vlSymsp->TOP.reset) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__waddr = 0U;
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq_valid_buf = 0U;
+        vlSelf->__PVT__axi_ram_inst__DOT__s_axi_bvalid_reg = 0U;
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__aw2b_bdata = 0U;
+    } else {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__waddr 
+            = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__wnext;
+        if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq_read) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq_valid_buf 
+                = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq_valid;
+        }
+        if ((1U & (~ ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__need_wrsp) 
+                      & (~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__next_resp)))))) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__aw2b_bdata 
+                = ((0xeU >= (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__pout))
+                    ? vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem
+                   [vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__pout]
+                    : (IData)(vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT____Vxrand_h8d9647ad__0));
+        }
+    }
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__need_wrsp 
+        = __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__need_wrsp;
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__next_resp 
+        = __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__next_resp;
+    if (__Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v0) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem[1U] 
+            = __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v0;
+    }
+    if (__Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v1) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem[2U] 
+            = __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v1;
+    }
+    if (__Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v2) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem[3U] 
+            = __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v2;
+    }
+    if (__Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v3) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem[4U] 
+            = __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v3;
+    }
+    if (__Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v4) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem[5U] 
+            = __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v4;
+    }
+    if (__Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v5) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem[6U] 
+            = __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v5;
+    }
+    if (__Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v6) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem[7U] 
+            = __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v6;
+    }
+    if (__Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v7) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem[8U] 
+            = __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v7;
+    }
+    if (__Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v8) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem[9U] 
+            = __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v8;
+    }
+    if (__Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v9) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem[0xaU] 
+            = __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v9;
+    }
+    if (__Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v10) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem[0xbU] 
+            = __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v10;
+    }
+    if (__Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v11) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem[0xcU] 
+            = __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v11;
+    }
+    if (__Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v12) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem[0xdU] 
+            = __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v12;
+    }
+    if (__Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v13) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem[0xeU] 
+            = __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v13;
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem[0U] 
+            = __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__mem__v14;
+    }
+    if (vlSymsp->TOP.reset) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__resp_ready = 1U;
+    } else if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__pop) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__resp_ready = 1U;
+    } else if (((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__push) 
+                & ((~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__pop)) 
+                   & ((3U == (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__pout)) 
+                      & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__data_vld))))) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__resp_ready = 0U;
+    }
+    if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__push) {
+        __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__mem__v0 
+            = (0xf00000000ULL | (QData)((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__test_data_V_load_reg_316)));
+        __Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__mem__v0 = 1U;
+        __Vdlyvdim0__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__mem__v0 
+            = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__waddr;
+    }
+    if (vlSymsp->TOP.reset) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__waddr = 0U;
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__last_sect_buf = 0U;
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__could_multi_bursts__DOT__awlen_buf = 0U;
+        vlSelf->__PVT__axi_ram_inst__DOT__s_axi_wready_reg = 0U;
+        vlSelf->__PVT__axi_ram_inst__DOT__s_axi_awready_reg = 0U;
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__WVALID_Dummy = 0U;
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__AWVALID_Dummy = 0U;
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__strb_buf = 0U;
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__data_vld = 0U;
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__pout 
+            = __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__pout;
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__data_vld = 0U;
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__pout 
+            = __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__pout;
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__data_vld = 0U;
+    } else {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__waddr 
+            = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__wnext;
+        if (((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__next_sect) 
+             & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__last_sect))) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__last_sect_buf = 1U;
+        } else if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__next_sect) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__last_sect_buf = 0U;
+        }
+        if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_w) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__could_multi_bursts__DOT__awlen_buf 
+                = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__awlen_tmp;
+        }
+        if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__next_data) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__WVALID_Dummy = 1U;
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__strb_buf 
+                = (0xfU & (IData)((vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__dout_buf 
+                                   >> 0x20U)));
+        } else if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__ready_for_data) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__WVALID_Dummy = 0U;
+        }
+        if (((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_w) 
+             & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__invalid_len_event_reg2))) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__AWVALID_Dummy = 0U;
+        } else if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_w) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__AWVALID_Dummy = 1U;
+        } else if (((~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_w)) 
+                    & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__AWREADY_Dummy))) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__AWVALID_Dummy = 0U;
+        }
+        if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__push) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__data_vld = 1U;
+        } else if ((((~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__push)) 
+                     & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__pop)) 
+                    & (0U == (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__pout)))) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__data_vld = 0U;
+        }
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__pout 
+            = __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__pout;
+        if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__push) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__data_vld = 1U;
+        } else if ((((~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__push)) 
+                     & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__pop)) 
+                    & (0U == (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__pout)))) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__data_vld = 0U;
+        }
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__pout 
+            = __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__pout;
+        if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__push) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__data_vld = 1U;
+        } else if ((((~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__push)) 
+                     & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__pop)) 
+                    & (0U == (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__pout)))) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__data_vld = 0U;
+        }
+    }
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__pout 
+        = __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__pout;
+    if (__Vdlyvset__axi_ram_inst__DOT__mem__v0) {
+        vlSelf->__PVT__axi_ram_inst__DOT__mem[__Vdlyvdim0__axi_ram_inst__DOT__mem__v0] 
+            = (((~ ((IData)(0xffU) << (IData)(__Vdlyvlsb__axi_ram_inst__DOT__mem__v0))) 
+                & vlSelf->__PVT__axi_ram_inst__DOT__mem
+                [__Vdlyvdim0__axi_ram_inst__DOT__mem__v0]) 
+               | (0xffffffffULL & ((IData)(__Vdlyvval__axi_ram_inst__DOT__mem__v0) 
+                                   << (IData)(__Vdlyvlsb__axi_ram_inst__DOT__mem__v0))));
+    }
+    if (__Vdlyvset__axi_ram_inst__DOT__mem__v1) {
+        vlSelf->__PVT__axi_ram_inst__DOT__mem[__Vdlyvdim0__axi_ram_inst__DOT__mem__v1] 
+            = (((~ ((IData)(0xffU) << (IData)(__Vdlyvlsb__axi_ram_inst__DOT__mem__v1))) 
+                & vlSelf->__PVT__axi_ram_inst__DOT__mem
+                [__Vdlyvdim0__axi_ram_inst__DOT__mem__v1]) 
+               | (0xffffffffULL & ((IData)(__Vdlyvval__axi_ram_inst__DOT__mem__v1) 
+                                   << (IData)(__Vdlyvlsb__axi_ram_inst__DOT__mem__v1))));
+    }
+    if (__Vdlyvset__axi_ram_inst__DOT__mem__v2) {
+        vlSelf->__PVT__axi_ram_inst__DOT__mem[__Vdlyvdim0__axi_ram_inst__DOT__mem__v2] 
+            = (((~ ((IData)(0xffU) << (IData)(__Vdlyvlsb__axi_ram_inst__DOT__mem__v2))) 
+                & vlSelf->__PVT__axi_ram_inst__DOT__mem
+                [__Vdlyvdim0__axi_ram_inst__DOT__mem__v2]) 
+               | (0xffffffffULL & ((IData)(__Vdlyvval__axi_ram_inst__DOT__mem__v2) 
+                                   << (IData)(__Vdlyvlsb__axi_ram_inst__DOT__mem__v2))));
+    }
+    if (__Vdlyvset__axi_ram_inst__DOT__mem__v3) {
+        vlSelf->__PVT__axi_ram_inst__DOT__mem[__Vdlyvdim0__axi_ram_inst__DOT__mem__v3] 
+            = (((~ ((IData)(0xffU) << (IData)(__Vdlyvlsb__axi_ram_inst__DOT__mem__v3))) 
+                & vlSelf->__PVT__axi_ram_inst__DOT__mem
+                [__Vdlyvdim0__axi_ram_inst__DOT__mem__v3]) 
+               | (0xffffffffULL & ((IData)(__Vdlyvval__axi_ram_inst__DOT__mem__v3) 
+                                   << (IData)(__Vdlyvlsb__axi_ram_inst__DOT__mem__v3))));
+    }
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__awlen_tmp 
+        = ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__could_multi_bursts__DOT__last_loop)
+            ? (0xfU & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__sect_len_buf))
+            : 0xfU);
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__resp_match 
+        = ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__next_resp) 
+           & ((IData)((0U != (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__aw2b_bdata))) 
+              & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__need_wrsp)));
+    if ((((2U == (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rs_rdata__DOT__state)) 
+          & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rdata_valid_t)) 
+         | (((3U == (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rs_rdata__DOT__state)) 
+             & ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__data_in_out_V_RREADY) 
+                & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rdata_valid_t))) 
+            | ((1U == (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rs_rdata__DOT__state)) 
+               & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__data_in_out_V_RREADY))))) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rs_rdata__DOT__data_p1 
+            = ((1U == (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rs_rdata__DOT__state))
+                ? vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rs_rdata__DOT__data_p2
+                : vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rs_rrsp_rdata);
+    }
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__awaddr_tmp 
+        = ((0U == (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__could_multi_bursts__DOT__loop_cnt))
+            ? vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__sect_addr_buf
+            : (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__could_multi_bursts__DOT__awaddr_buf 
+               + VL_SHIFTL_III(32,32,32, ((IData)(1U) 
+                                          + (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__could_multi_bursts__DOT__awlen_buf)), 2U)));
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__AWREADY_Dummy 
+        = ((IData)(vlSelf->__PVT__axi_ram_inst__DOT__s_axi_awready_reg) 
+           & (0U == (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__wreq_throttl__DOT__genblk1__DOT__throttl_cnt)));
+    vlSelf->__PVT__axi_ram_inst__DOT__mem_wr_en = 0U;
+    vlSelf->__PVT__axi_ram_inst__DOT__s_axi_bvalid_next 
+        = ((IData)(vlSelf->__PVT__axi_ram_inst__DOT__s_axi_bvalid_reg) 
+           & (~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__resp_ready)));
+    vlSelf->__PVT__axi_ram_inst__DOT__s_axi_bid_next 
+        = vlSelf->__PVT__axi_ram_inst__DOT__s_axi_bid_reg;
+    if ((0U != (IData)(vlSelf->__PVT__axi_ram_inst__DOT__write_state_reg))) {
+        if ((1U == (IData)(vlSelf->__PVT__axi_ram_inst__DOT__write_state_reg))) {
+            if (((IData)(vlSelf->__PVT__axi_ram_inst__DOT__s_axi_wready_reg) 
+                 & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__WVALID_Dummy))) {
+                vlSelf->__PVT__axi_ram_inst__DOT__mem_wr_en = 1U;
+                if (((0U == (IData)(vlSelf->__PVT__axi_ram_inst__DOT__write_count_reg)) 
+                     | (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__WLAST_Dummy))) {
+                    if ((1U & ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__resp_ready) 
+                               | (~ (IData)(vlSelf->__PVT__axi_ram_inst__DOT__s_axi_bvalid_reg))))) {
+                        vlSelf->__PVT__axi_ram_inst__DOT__s_axi_bvalid_next = 1U;
+                        vlSelf->__PVT__axi_ram_inst__DOT__s_axi_bid_next 
+                            = vlSelf->__PVT__axi_ram_inst__DOT__write_id_reg;
+                    }
+                }
+            }
+        } else if ((2U == (IData)(vlSelf->__PVT__axi_ram_inst__DOT__write_state_reg))) {
+            if ((1U & ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__resp_ready) 
+                       | (~ (IData)(vlSelf->__PVT__axi_ram_inst__DOT__s_axi_bvalid_reg))))) {
+                vlSelf->__PVT__axi_ram_inst__DOT__s_axi_bvalid_next = 1U;
+                vlSelf->__PVT__axi_ram_inst__DOT__s_axi_bid_next 
+                    = vlSelf->__PVT__axi_ram_inst__DOT__write_id_reg;
+            }
+        }
+    }
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__ready_for_data 
+        = (1U & (~ ((~ (IData)(vlSelf->__PVT__axi_ram_inst__DOT__s_axi_wready_reg)) 
+                    & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__WVALID_Dummy))));
+    vlSelf->__PVT__s_axi_awvalid = ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__AWVALID_Dummy) 
+                                    & (0U == (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__wreq_throttl__DOT__genblk1__DOT__throttl_cnt)));
+    if (((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rs_rreq__DOT__s_ready_t) 
+         & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__data_in_out_V_ARVALID))) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rs_rreq__DOT__data_p2 
+            = (0x100000000ULL | (QData)((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__reg_213)));
+    }
+    if (((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__rs_wreq__DOT__s_ready_t) 
+         & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__data_in_out_V_AWVALID))) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__rs_wreq__DOT__data_p2 
+            = (0x100000000ULL | (QData)((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__reg_213)));
+    }
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__pop 
+        = ((~ ((~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__next_resp)) 
+               & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__need_wrsp))) 
+           & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__data_vld));
+    if (vlSymsp->TOP.reset) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__dout_buf = 0ULL;
+    } else if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__pop) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__dout_buf 
+            = ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__show_ahead)
+                ? vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__q_tmp
+                : vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__q_buf);
+    }
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__q_buf 
+        = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__mem
+        [vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__rnext];
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__show_ahead 
+        = ((1U & (~ (IData)(vlSymsp->TOP.reset))) && 
+           ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__push) 
+            & ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__usedw) 
+               == (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__pop))));
+    vlSelf->__PVT__axi_ram_inst__DOT__read_addr_reg 
+        = vlSelf->__PVT__axi_ram_inst__DOT__read_addr_next;
+    vlSelf->__PVT__axi_ram_inst__DOT__mem_rd_en = 0U;
+    if (vlSymsp->TOP.reset) {
+        vlSelf->__PVT__axi_ram_inst__DOT__s_axi_rvalid_reg = 0U;
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__full_n = 1U;
+    } else if (((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__push) 
+                & (~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__pop)))) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__full_n 
+            = (0xffU != (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__usedw));
+    } else if (((~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__push)) 
+                & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__pop))) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__full_n = 1U;
+    }
+    vlSelf->__PVT__axi_ram_inst__DOT__s_axi_rvalid_next 
+        = ((IData)(vlSelf->__PVT__axi_ram_inst__DOT__s_axi_rvalid_reg) 
+           & (~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__full_n)));
+    vlSelf->__PVT__axi_ram_inst__DOT__s_axi_rid_next 
+        = vlSelf->__PVT__axi_ram_inst__DOT__s_axi_rid_reg;
+    vlSelf->__PVT__axi_ram_inst__DOT__s_axi_rlast_next 
+        = vlSelf->__PVT__axi_ram_inst__DOT__s_axi_rlast_reg;
+    vlSelf->__PVT__axi_ram_inst__DOT__read_size_next 
+        = vlSelf->__PVT__axi_ram_inst__DOT__read_size_reg;
+    vlSelf->__PVT__axi_ram_inst__DOT__read_burst_next 
+        = vlSelf->__PVT__axi_ram_inst__DOT__read_burst_reg;
+    vlSelf->__PVT__axi_ram_inst__DOT__read_id_next 
+        = vlSelf->__PVT__axi_ram_inst__DOT__read_id_reg;
+    if (vlSymsp->TOP.reset) {
+        vlSelf->__PVT__axi_ram_inst__DOT__s_axi_arready_reg = 0U;
+    }
+    if ((1U & (~ (IData)(vlSelf->__PVT__axi_ram_inst__DOT__read_state_reg)))) {
+        if (((IData)(vlSelf->__PVT__axi_ram_inst__DOT__s_axi_arready_reg) 
+             & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__ARVALID_Dummy))) {
+            vlSelf->__PVT__axi_ram_inst__DOT__read_size_next = 2U;
+            vlSelf->__PVT__axi_ram_inst__DOT__read_burst_next = 1U;
+            vlSelf->__PVT__axi_ram_inst__DOT__read_id_next 
+                = vlSelf->__PVT__s_axi_arid;
+        }
+    }
+    vlSelf->__PVT__axi_ram_inst__DOT__s_axi_arready_next = 0U;
+    vlSelf->__PVT__axi_ram_inst__DOT__read_state_next = 0U;
+    vlSelf->__PVT__axi_ram_inst__DOT__read_count_next 
+        = vlSelf->__PVT__axi_ram_inst__DOT__read_count_reg;
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl_r 
+        = ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__could_multi_bursts__DOT__sect_handling) 
+           & ((~ ((~ (IData)(vlSelf->__PVT__axi_ram_inst__DOT__s_axi_arready_reg)) 
+                  & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__ARVALID_Dummy))) 
+              & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl_ready)));
+    if (vlSymsp->TOP.reset) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__invalid_len_event_reg2 = 0U;
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__start_addr_buf = 0U;
+    } else {
+        if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__next_sect) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__invalid_len_event_reg2 
+                = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__invalid_len_event_reg1;
+        }
+        if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq_read) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__start_addr_buf 
+                = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__start_addr;
+        }
+    }
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__first_sect 
+        = (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__sect_cnt 
+           == (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__start_addr_buf 
+               >> 0xcU));
+    if (vlSymsp->TOP.reset) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__beat_len_buf = 0U;
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__end_addr_buf = 0U;
+    } else if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq_read) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__beat_len_buf 
+            = (0x3ffU & ((vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__align_len 
+                          + (3U & vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__start_addr)) 
+                         >> 2U));
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__end_addr_buf 
+            = (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__align_len 
+               + vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__start_addr);
+    }
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__last_sect 
+        = (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__sect_cnt 
+           == (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__end_addr_buf 
+               >> 0xcU));
+    if (vlSymsp->TOP.reset) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__sect_len_buf = 0U;
+    } else if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__next_sect) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__sect_len_buf 
+            = (0x3ffU & (((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__first_sect) 
+                          & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__last_sect))
+                          ? (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__beat_len_buf)
+                          : (((~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__last_sect)) 
+                              & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__first_sect))
+                              ? ((IData)(0x3ffU) - 
+                                 (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__start_addr_buf 
+                                  >> 2U)) : (((~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__first_sect)) 
+                                              & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__last_sect))
+                                              ? (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__end_addr_buf 
+                                                 >> 2U)
+                                              : 0x3ffU))));
+    }
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__could_multi_bursts__DOT__last_loop 
+        = ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__could_multi_bursts__DOT__loop_cnt) 
+           == (0x3fU & ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__sect_len_buf) 
+                        >> 4U)));
+    if (vlSymsp->TOP.reset) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__data_vld = 0U;
+    } else if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__push) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__data_vld = 1U;
+    } else if ((((~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__push)) 
+                 & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__pop)) 
+                & (0U == (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__pout)))) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__data_vld = 0U;
+    }
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__pout 
+        = __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__pout;
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__push 
+        = ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__resp_ready) 
+           & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__resp_match));
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_w 
+        = ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__could_multi_bursts__DOT__sect_handling) 
+           & ((~ ((~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__AWREADY_Dummy)) 
+                  & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__AWVALID_Dummy))) 
+              & ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_burst_ready) 
+                 & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_ready))));
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__next_data 
+        = ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__burst_valid) 
+           & ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__ready_for_data) 
+              & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__dout_valid)));
+    vlSelf->__PVT__axi_ram_inst__DOT__write_burst_next 
+        = vlSelf->__PVT__axi_ram_inst__DOT__write_burst_reg;
+    vlSelf->__PVT__axi_ram_inst__DOT__write_size_next 
+        = vlSelf->__PVT__axi_ram_inst__DOT__write_size_reg;
+    vlSelf->__PVT__axi_ram_inst__DOT__write_id_next 
+        = vlSelf->__PVT__axi_ram_inst__DOT__write_id_reg;
+    vlSelf->__PVT__axi_ram_inst__DOT__s_axi_wready_next = 0U;
+    vlSelf->__PVT__axi_ram_inst__DOT__write_count_next 
+        = vlSelf->__PVT__axi_ram_inst__DOT__write_count_reg;
+    vlSelf->__PVT__axi_ram_inst__DOT__s_axi_awready_next = 0U;
+    vlSelf->__PVT__axi_ram_inst__DOT__write_state_next = 0U;
+    vlSelf->__PVT__axi_ram_inst__DOT__write_addr_next 
+        = vlSelf->__PVT__axi_ram_inst__DOT__write_addr_reg;
+    if ((0U == (IData)(vlSelf->__PVT__axi_ram_inst__DOT__write_state_reg))) {
+        vlSelf->__PVT__axi_ram_inst__DOT__s_axi_awready_next = 1U;
+        if (((IData)(vlSelf->__PVT__axi_ram_inst__DOT__s_axi_awready_reg) 
+             & (IData)(vlSelf->__PVT__s_axi_awvalid))) {
+            vlSelf->__PVT__axi_ram_inst__DOT__write_burst_next = 1U;
+            vlSelf->__PVT__axi_ram_inst__DOT__write_size_next = 2U;
+            vlSelf->__PVT__axi_ram_inst__DOT__write_id_next 
+                = vlSelf->__PVT__s_axi_awid;
+            vlSelf->__PVT__axi_ram_inst__DOT__s_axi_wready_next = 1U;
+            vlSelf->__PVT__axi_ram_inst__DOT__write_count_next 
+                = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__could_multi_bursts__DOT__awlen_buf;
+            vlSelf->__PVT__axi_ram_inst__DOT__s_axi_awready_next = 0U;
+            vlSelf->__PVT__axi_ram_inst__DOT__write_state_next = 1U;
+            vlSelf->__PVT__axi_ram_inst__DOT__write_addr_next 
+                = (0xffffU & vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__could_multi_bursts__DOT__awaddr_buf);
+        } else {
+            vlSelf->__PVT__axi_ram_inst__DOT__write_state_next = 0U;
+        }
+    } else if ((1U == (IData)(vlSelf->__PVT__axi_ram_inst__DOT__write_state_reg))) {
+        vlSelf->__PVT__axi_ram_inst__DOT__s_axi_wready_next = 1U;
+        if (((IData)(vlSelf->__PVT__axi_ram_inst__DOT__s_axi_wready_reg) 
+             & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__WVALID_Dummy))) {
+            if (((0U == (IData)(vlSelf->__PVT__axi_ram_inst__DOT__write_count_reg)) 
+                 | (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__WLAST_Dummy))) {
+                vlSelf->__PVT__axi_ram_inst__DOT__s_axi_wready_next = 0U;
+                if ((1U & ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__resp_ready) 
+                           | (~ (IData)(vlSelf->__PVT__axi_ram_inst__DOT__s_axi_bvalid_reg))))) {
+                    vlSelf->__PVT__axi_ram_inst__DOT__s_axi_awready_next = 1U;
+                    vlSelf->__PVT__axi_ram_inst__DOT__write_state_next = 0U;
+                } else {
+                    vlSelf->__PVT__axi_ram_inst__DOT__write_state_next = 2U;
+                }
+            } else {
+                vlSelf->__PVT__axi_ram_inst__DOT__write_state_next = 1U;
+            }
+            if ((0U < (IData)(vlSelf->__PVT__axi_ram_inst__DOT__write_count_reg))) {
+                vlSelf->__PVT__axi_ram_inst__DOT__write_count_next 
+                    = (0xffU & ((IData)(vlSelf->__PVT__axi_ram_inst__DOT__write_count_reg) 
+                                - (IData)(1U)));
+                if ((0U != (IData)(vlSelf->__PVT__axi_ram_inst__DOT__write_burst_reg))) {
+                    vlSelf->__PVT__axi_ram_inst__DOT__write_addr_next 
+                        = (0xffffU & ((IData)(vlSelf->__PVT__axi_ram_inst__DOT__write_addr_reg) 
+                                      + ((IData)(1U) 
+                                         << (IData)(vlSelf->__PVT__axi_ram_inst__DOT__write_size_reg))));
+                }
+            }
+        } else {
+            vlSelf->__PVT__axi_ram_inst__DOT__write_state_next = 1U;
+        }
+    } else if ((2U == (IData)(vlSelf->__PVT__axi_ram_inst__DOT__write_state_reg))) {
+        if ((1U & ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__resp_ready) 
+                   | (~ (IData)(vlSelf->__PVT__axi_ram_inst__DOT__s_axi_bvalid_reg))))) {
+            vlSelf->__PVT__axi_ram_inst__DOT__s_axi_awready_next = 1U;
+            vlSelf->__PVT__axi_ram_inst__DOT__write_state_next = 0U;
+        } else {
+            vlSelf->__PVT__axi_ram_inst__DOT__write_state_next = 2U;
+        }
+    }
+    if (__Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__mem__v0) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__mem[__Vdlyvdim0__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__mem__v0] 
+            = __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__mem__v0;
+    }
+    if (vlSymsp->TOP.reset) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__invalid_len_event_reg2 = 0U;
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rs2f_rreq_ack = 1U;
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__rs2f_wreq_ack = 1U;
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__dout_buf = 0ULL;
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__q_tmp = 0ULL;
+    } else {
+        if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__next_sect) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__invalid_len_event_reg2 
+                = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__invalid_len_event_reg1;
+        }
+        if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__pop) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rs2f_rreq_ack = 1U;
+        } else if (((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__push) 
+                    & ((~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__pop)) 
+                       & ((3U == (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__pout)) 
+                          & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__data_vld))))) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rs2f_rreq_ack = 0U;
+        }
+        if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__pop) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__rs2f_wreq_ack = 1U;
+        } else if (((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__push) 
+                    & ((~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__pop)) 
+                       & ((3U == (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__pout)) 
+                          & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__data_vld))))) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__rs2f_wreq_ack = 0U;
+        }
+        if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__pop) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__dout_buf 
+                = ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__show_ahead)
+                    ? vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__q_tmp
+                    : vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__q_buf);
+        }
+        if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__push) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__q_tmp 
+                = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rresp_rdata;
+        }
+    }
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rresp_rdata 
+        = (((QData)((IData)(vlSelf->__PVT__axi_ram_inst__DOT__s_axi_rlast_reg)) 
+            << 0x22U) | (QData)((IData)(vlSelf->__PVT__axi_ram_inst__DOT__s_axi_rdata_reg)));
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__usedw 
+        = __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__usedw;
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__push 
+        = ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__full_n) 
+           & (IData)(vlSelf->__PVT__axi_ram_inst__DOT__s_axi_rvalid_reg));
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__wnext 
+        = (0xffU & ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__push)
+                     ? ((0xffU == (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__waddr))
+                         ? 0U : ((IData)(1U) + (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__waddr)))
+                     : (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__waddr)));
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__push 
+        = ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl_ready) 
+           & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl_r));
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__next_sect 
+        = ((~ ((~ ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__could_multi_bursts__DOT__last_loop) 
+                   & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl_r))) 
+               & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__could_multi_bursts__DOT__sect_handling))) 
+           & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rreq_handling));
+    if (((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rdata_valid_t) 
+         & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rs_rdata__DOT__s_ready_t))) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rs_rdata__DOT__data_p2 
+            = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rs_rrsp_rdata;
+    }
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp__DOT__push 
+        = ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_ready) 
+           & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_w));
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__next_sect 
+        = ((~ ((~ ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__could_multi_bursts__DOT__last_loop) 
+                   & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_w))) 
+               & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__could_multi_bursts__DOT__sect_handling))) 
+           & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__wreq_handling));
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__next_burst 
+        = (((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__burst_len) 
+            == (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__len_cnt)) 
+           & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__next_data));
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__push 
+        = ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_burst_ready) 
+           & ((~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__invalid_len_event_reg2)) 
+              & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_w)));
+    __Vtableidx4 = (((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rs_rreq__DOT__next) 
+                     << 3U) | (((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rs_rreq__DOT__state) 
+                                << 1U) | (IData)(vlSymsp->TOP.reset)));
+    if (Vtb_axi4_ram_burst__ConstPool__TABLE_ha7522407_0
+        [__Vtableidx4]) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rs_rreq__DOT__s_ready_t 
+            = Vtb_axi4_ram_burst__ConstPool__TABLE_h4dc84f9e_0
+            [__Vtableidx4];
+    }
+    __Vtableidx2 = (((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__rs_wreq__DOT__next) 
+                     << 3U) | (((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__rs_wreq__DOT__state) 
+                                << 1U) | (IData)(vlSymsp->TOP.reset)));
+    if (Vtb_axi4_ram_burst__ConstPool__TABLE_ha7522407_0
+        [__Vtableidx2]) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__rs_wreq__DOT__s_ready_t 
+            = Vtb_axi4_ram_burst__ConstPool__TABLE_h4dc84f9e_0
+            [__Vtableidx2];
+    }
+    if ((IData)((0U != (0x804U & vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm)))) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__reg_213 
+            = vlSelf->__PVT__axi4_tester_inst__DOT__addr_q0;
+    }
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__q_buf 
+        = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__mem
+        [vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__rnext];
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__show_ahead 
+        = ((1U & (~ (IData)(vlSymsp->TOP.reset))) && 
+           ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__push) 
+            & ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__usedw) 
+               == (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__pop))));
+    vlSelf->__PVT__axi_ram_inst__DOT__read_addr_next 
+        = vlSelf->__PVT__axi_ram_inst__DOT__read_addr_reg;
+    if (vlSelf->__PVT__axi_ram_inst__DOT__read_state_reg) {
+        if (vlSelf->__PVT__axi_ram_inst__DOT__read_state_reg) {
+            if ((1U & ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__full_n) 
+                       | (~ (IData)(vlSelf->__PVT__axi_ram_inst__DOT__s_axi_rvalid_reg))))) {
+                vlSelf->__PVT__axi_ram_inst__DOT__mem_rd_en = 1U;
+                vlSelf->__PVT__axi_ram_inst__DOT__s_axi_rvalid_next = 1U;
+                vlSelf->__PVT__axi_ram_inst__DOT__s_axi_rid_next 
+                    = vlSelf->__PVT__axi_ram_inst__DOT__read_id_reg;
+                if ((0U >= (IData)(vlSelf->__PVT__axi_ram_inst__DOT__read_count_reg))) {
+                    vlSelf->__PVT__axi_ram_inst__DOT__s_axi_rlast_next = 1U;
+                    vlSelf->__PVT__axi_ram_inst__DOT__s_axi_arready_next = 1U;
+                } else {
+                    vlSelf->__PVT__axi_ram_inst__DOT__s_axi_rlast_next = 0U;
+                }
+                if ((0U < (IData)(vlSelf->__PVT__axi_ram_inst__DOT__read_count_reg))) {
+                    vlSelf->__PVT__axi_ram_inst__DOT__read_count_next 
+                        = (0xffU & ((IData)(vlSelf->__PVT__axi_ram_inst__DOT__read_count_reg) 
+                                    - (IData)(1U)));
+                    if ((0U != (IData)(vlSelf->__PVT__axi_ram_inst__DOT__read_burst_reg))) {
+                        vlSelf->__PVT__axi_ram_inst__DOT__read_addr_next 
+                            = (0xffffU & ((IData)(vlSelf->__PVT__axi_ram_inst__DOT__read_addr_reg) 
+                                          + ((IData)(1U) 
+                                             << (IData)(vlSelf->__PVT__axi_ram_inst__DOT__read_size_reg))));
+                    }
+                }
+            }
+            vlSelf->__PVT__axi_ram_inst__DOT__read_state_next 
+                = ((1U & (~ ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__full_n) 
+                             | (~ (IData)(vlSelf->__PVT__axi_ram_inst__DOT__s_axi_rvalid_reg))))) 
+                   || (0U < (IData)(vlSelf->__PVT__axi_ram_inst__DOT__read_count_reg)));
+        }
+    } else {
+        vlSelf->__PVT__axi_ram_inst__DOT__s_axi_arready_next = 1U;
+        if (((IData)(vlSelf->__PVT__axi_ram_inst__DOT__s_axi_arready_reg) 
+             & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__ARVALID_Dummy))) {
+            vlSelf->__PVT__axi_ram_inst__DOT__s_axi_arready_next = 0U;
+            vlSelf->__PVT__axi_ram_inst__DOT__read_count_next 
+                = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__could_multi_bursts__DOT__arlen_buf;
+            vlSelf->__PVT__axi_ram_inst__DOT__read_addr_next 
+                = (0xffffU & vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__could_multi_bursts__DOT__araddr_buf);
+            vlSelf->__PVT__axi_ram_inst__DOT__read_state_next = 1U;
+        } else {
+            vlSelf->__PVT__axi_ram_inst__DOT__read_state_next = 0U;
+        }
+    }
+    if (vlSymsp->TOP.reset) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__invalid_len_event_reg1 = 0U;
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__start_addr = 0U;
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__align_len = 0U;
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__start_addr_buf = 0U;
+    } else {
+        if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq_read) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__invalid_len_event_reg1 
+                = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__invalid_len_event;
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__start_addr_buf 
+                = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__start_addr;
+        }
+        if (((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq_valid) 
+             & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__ready_for_wreq))) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__start_addr 
+                = VL_SHIFTL_III(32,32,32, (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq_data), 2U);
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__align_len 
+                = (((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__zero_len_event) 
+                    | (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__negative_len_event))
+                    ? 0U : (VL_SHIFTL_III(32,32,32, (IData)(
+                                                            (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq_data 
+                                                             >> 0x20U)), 2U) 
+                            - (IData)(1U)));
+        }
+    }
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__first_sect 
+        = (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__sect_cnt 
+           == (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__start_addr_buf 
+               >> 0xcU));
+    if (vlSymsp->TOP.reset) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__beat_len_buf = 0U;
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__end_addr_buf = 0U;
+    } else if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq_read) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__beat_len_buf 
+            = (0x3ffU & ((vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__align_len 
+                          + (3U & vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__start_addr)) 
+                         >> 2U));
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__end_addr_buf 
+            = (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__align_len 
+               + vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__start_addr);
+    }
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__last_sect 
+        = (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__sect_cnt 
+           == (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__end_addr_buf 
+               >> 0xcU));
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rs_rrsp_rdata 
+        = (((QData)((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__resp_buf)) 
+            << 0x20U) | (QData)((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__bus_equal_gen__DOT__data_buf)));
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__ready_for_wreq 
+        = (1U & (~ ((~ ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__last_sect) 
+                        & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__next_sect))) 
+                    & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__wreq_handling))));
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__pop 
+        = ((~ ((~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__next_burst)) 
+               & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__burst_valid))) 
+           & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__bus_equal_gen__DOT__fifo_burst__DOT__data_vld));
+    if (__Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__mem__v0) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__mem[__Vdlyvdim0__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__mem__v0] 
+            = __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__mem__v0;
+    }
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__usedw 
+        = __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__usedw;
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__pop 
+        = ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__empty_n) 
+           & ((~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__dout_valid)) 
+              | (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__next_data)));
+    if (vlSymsp->TOP.reset) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__invalid_len_event_reg1 = 0U;
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__data_vld = 0U;
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__data_vld = 0U;
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__q_tmp = 0ULL;
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__invalid_len_event = 0U;
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq_valid_buf 
+            = __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq_valid_buf;
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq_data = 0ULL;
+    } else {
+        if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq_read) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__invalid_len_event_reg1 
+                = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__invalid_len_event;
+        }
+        if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__push) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__data_vld = 1U;
+        } else if ((((~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__push)) 
+                     & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__pop)) 
+                    & (0U == (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__pout)))) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__data_vld = 0U;
+        }
+        if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__push) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__data_vld = 1U;
+        } else if ((((~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__push)) 
+                     & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__pop)) 
+                    & (0U == (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__pout)))) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__data_vld = 0U;
+        }
+        if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__push) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__q_tmp 
+                = (0xf00000000ULL | (QData)((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__test_data_V_load_reg_316)));
+        }
+        if ((((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq_valid) 
+              | (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq_valid_buf)) 
+             & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__ready_for_rreq))) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__invalid_len_event 
+                = ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq_valid) 
+                   & ((0U == (IData)((vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq_data 
+                                      >> 0x20U))) | (IData)(
+                                                            (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq_data 
+                                                             >> 0x3fU))));
+        }
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq_valid_buf 
+            = __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq_valid_buf;
+        if ((1U & (~ ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq_valid) 
+                      & (~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq_read)))))) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq_data 
+                = ((4U >= (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__pout))
+                    ? vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__mem
+                   [vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__pout]
+                    : vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT____Vxrand_h7d28236b__0);
+        }
+    }
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__pout 
+        = __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__pout;
+    if (__Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__mem__v0) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__mem[1U] 
+            = __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__mem__v0;
+    }
+    if (__Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__mem__v1) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__mem[2U] 
+            = __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__mem__v1;
+    }
+    if (__Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__mem__v2) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__mem[3U] 
+            = __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__mem__v2;
+    }
+    if (__Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__mem__v3) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__mem[4U] 
+            = __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__mem__v3;
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__mem[0U] 
+            = __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__mem__v4;
+    }
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq_valid 
+        = __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq_valid;
+    if (vlSymsp->TOP.reset) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__align_len = 0U;
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__start_addr = 0U;
+    } else if (((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq_valid) 
+                & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__ready_for_rreq))) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__align_len 
+            = (VL_SHIFTL_III(32,32,32, (IData)((vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq_data 
+                                                >> 0x20U)), 2U) 
+               - (IData)(1U));
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__start_addr 
+            = VL_SHIFTL_III(32,32,32, (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq_data), 2U);
+    }
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__ready_for_rreq 
+        = (1U & (~ ((~ ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__last_sect) 
+                        & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__next_sect))) 
+                    & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rreq_handling))));
+    __Vtableidx6 = (((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rs_rdata__DOT__next) 
+                     << 3U) | (((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rs_rdata__DOT__state) 
+                                << 1U) | (IData)(vlSymsp->TOP.reset)));
+    if (Vtb_axi4_ram_burst__ConstPool__TABLE_ha7522407_0
+        [__Vtableidx6]) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rs_rdata__DOT__s_ready_t 
+            = Vtb_axi4_ram_burst__ConstPool__TABLE_h4dc84f9e_0
+            [__Vtableidx6];
+    }
+    if ((IData)((0U != (0x402U & vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm)))) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__addr_q0 
+            = vlSelf->__PVT__axi4_tester_inst__DOT__addr_U__DOT__axi4_tester_addr_rom_U__DOT__ram
+            [(0x3ffU & ((0x400U & vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm)
+                         ? (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__i1_0_reg_177)
+                         : ((2U & vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm)
+                             ? (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__i_0_reg_166)
+                             : (IData)(vlSelf->axi4_tester_inst__DOT____Vxrand_h8d93d6a6__0))))];
+    }
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__rnext 
+        = (0xffU & ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__pop)
+                     ? ((0xffU == (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__raddr))
+                         ? 0U : ((IData)(1U) + (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__raddr)))
+                     : (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__raddr)));
+    if ((4U & vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm)) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__test_data_V_load_reg_316 
+            = vlSelf->__PVT__axi4_tester_inst__DOT__test_data_V_q0;
+    }
+    if (vlSymsp->TOP.reset) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rdata_valid_t = 0U;
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__invalid_len_event = 0U;
+    } else {
+        if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__next_beat) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rdata_valid_t = 1U;
+        } else if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__bus_equal_gen__DOT__ready_for_data) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rdata_valid_t = 0U;
+        }
+        if (vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq_read) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__invalid_len_event 
+                = ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__zero_len_event) 
+                   | (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__negative_len_event));
+        }
+    }
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__zero_len_event 
+        = ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq_valid) 
+           & (0U == (IData)((vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq_data 
+                             >> 0x20U))));
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__negative_len_event 
+        = ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq_valid) 
+           & (IData)((vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq_data 
+                      >> 0x3fU)));
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq_read 
+        = ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__ready_for_wreq) 
+           & ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq_valid) 
+              | (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq_valid_buf)));
+    vlSelf->__PVT__axi4_tester_inst__DOT__i1_0_reg_177 
+        = __Vdly__axi4_tester_inst__DOT__i1_0_reg_177;
+    if (vlSymsp->TOP.reset) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rs_rreq__DOT__state = 2U;
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__rs_wreq__DOT__state = 2U;
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq_data = 0ULL;
+    } else {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rs_rreq__DOT__state 
+            = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rs_rreq__DOT__next;
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__rs_wreq__DOT__state 
+            = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__rs_wreq__DOT__next;
+        if ((1U & (~ ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq_valid) 
+                      & (~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq_read)))))) {
+            vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq_data 
+                = ((4U >= (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__pout))
+                    ? vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__mem
+                   [vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__pout]
+                    : vlSelf->axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT____Vxrand_h7d28236b__0);
+        }
+    }
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__pout 
+        = __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__pout;
+    if (__Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__mem__v0) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__mem[1U] 
+            = __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__mem__v0;
+    }
+    if (__Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__mem__v1) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__mem[2U] 
+            = __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__mem__v1;
+    }
+    if (__Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__mem__v2) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__mem[3U] 
+            = __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__mem__v2;
+    }
+    if (__Vdlyvset__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__mem__v3) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__mem[4U] 
+            = __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__mem__v3;
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__mem[0U] 
+            = __Vdlyvval__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__mem__v4;
+    }
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq_valid 
+        = __Vdly__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq_valid;
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__bus_equal_gen__DOT__ready_for_data 
+        = (1U & (~ ((~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rs_rdata__DOT__s_ready_t)) 
+                    & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rdata_valid_t))));
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__pop 
+        = ((~ ((~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq_read)) 
+               & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq_valid))) 
+           & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__data_vld));
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__push 
+        = ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rs2f_rreq_ack) 
+           & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rs_rreq__DOT__state));
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_wreq__DOT__push 
+        = ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__rs2f_wreq_ack) 
+           & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__rs_wreq__DOT__state));
+    if ((IData)((0U != (0x200002U & vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm)))) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__test_data_V_q0 
+            = vlSelf->__PVT__axi4_tester_inst__DOT__test_data_V_U__DOT__axi4_tester_test_data_V_rom_U__DOT__ram
+            [(0x3ffU & ((0x200000U & vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm)
+                         ? (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__i2_0_reg_188)
+                         : ((2U & vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm)
+                             ? (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__i_0_reg_166)
+                             : (IData)(vlSelf->axi4_tester_inst__DOT____Vxrand_h8d93d6a6__2))))];
+    }
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq_read 
+        = ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__ready_for_rreq) 
+           & ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq_valid) 
+              | (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq_valid_buf)));
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__next_beat 
+        = ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__bus_equal_gen__DOT__ready_for_data) 
+           & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__dout_valid));
+    if ((0x200000U & vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm)) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__i_2_reg_359 
+            = (0x7ffU & ((IData)(1U) + (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__i2_0_reg_188)));
+    }
+    vlSelf->__PVT__axi4_tester_inst__DOT__i2_0_reg_188 
+        = __Vdly__axi4_tester_inst__DOT__i2_0_reg_188;
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__pop 
+        = ((~ ((~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq_read)) 
+               & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq_valid))) 
+           & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rreq__DOT__data_vld));
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__pop 
+        = ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__empty_n) 
+           & ((~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__dout_valid)) 
+              | (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__next_beat)));
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__tmp_last_2 
+        = (((IData)((vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__dout_buf 
+                     >> 0x22U)) & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__dout_valid)) 
+           & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__next_beat));
+    vlSelf->__PVT__axi4_tester_inst__DOT__icmp_ln883_fu_292_p2 
+        = (vlSelf->__PVT__axi4_tester_inst__DOT__data_from_mem_V_q0 
+           == vlSelf->__PVT__axi4_tester_inst__DOT__test_data_V_q0);
+    if ((1U & vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm)) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__i_0_reg_166 = 0U;
+    } else if (((vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm 
+                 >> 9U) & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__data_in_out_V_BVALID))) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__i_0_reg_166 
+            = vlSelf->__PVT__axi4_tester_inst__DOT__i_reg_301;
+    }
+    if (vlSymsp->TOP.reset) {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rs_rdata__DOT__state = 2U;
+        vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm = 1U;
+    } else {
+        vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rs_rdata__DOT__state 
+            = vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rs_rdata__DOT__next;
+        vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm 
+            = vlSelf->__PVT__axi4_tester_inst__DOT__ap_NS_fsm;
+    }
+    vlSelf->__PVT__axi4_tester_inst__DOT__data_from_mem_V_address0 
+        = (0x3ffU & ((0x200000U & vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm)
+                      ? (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__i2_0_reg_188)
+                      : ((0x100000U & vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm)
+                          ? (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__zext_ln22_reg_335)
+                          : (IData)(vlSelf->axi4_tester_inst__DOT____Vxrand_h8d93d6a6__1))));
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__rnext 
+        = (0xffU & ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__pop)
+                     ? ((0xffU == (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__raddr))
+                         ? 0U : ((IData)(1U) + (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__raddr)))
+                     : (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__buff_rdata__DOT__raddr)));
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__pop 
+        = ((~ ((~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__tmp_last_2)) 
+               & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__need_rlast))) 
+           & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__fifo_rctl__DOT__data_vld));
+    vlSelf->__PVT__axi4_tester_inst__DOT__i_reg_301 
+        = __Vdly__axi4_tester_inst__DOT__i_reg_301;
+    vlSelf->__PVT__axi4_tester_inst__DOT__data_in_out_V_BVALID 
+        = __Vdly__axi4_tester_inst__DOT__data_in_out_V_BVALID;
+    vlSelf->correct_V_ap_vld = (1U & (vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm 
+                                      >> 0x17U));
+    vlSelf->__PVT__axi4_tester_inst__DOT__data_from_mem_V_ce0 
+        = (IData)((0U != (0x300000U & vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm)));
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__push 
+        = ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__full_n) 
+           & (vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm 
+              >> 4U));
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__wnext 
+        = (0xffU & ((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__push)
+                     ? ((0xffU == (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__waddr))
+                         ? 0U : ((IData)(1U) + (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__waddr)))
+                     : (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__waddr)));
+    vlSelf->__PVT__axi4_tester_inst__DOT__data_in_out_V_BREADY 
+        = ((vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm 
+            >> 9U) & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__data_in_out_V_BVALID));
+    vlSelf->__PVT__axi4_tester_inst__DOT__ap_NS_fsm 
+        = (((((((((1U == vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm) 
+                  | (2U == vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm)) 
+                 | (4U == vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm)) 
+                | (8U == vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm)) 
+               | (0x10U == vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm)) 
+              | (0x20U == vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm)) 
+             | (0x40U == vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm)) 
+            | (0x80U == vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm))
+            ? ((1U == vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm)
+                ? 2U : ((2U == vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm)
+                         ? (((0x400U == (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__i_0_reg_166)) 
+                             & (vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm 
+                                >> 1U)) ? 0x400U : 4U)
+                         : ((4U == vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm)
+                             ? 8U : ((8U == vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm)
+                                      ? (((vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm 
+                                           >> 3U) & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__rs_wreq__DOT__s_ready_t))
+                                          ? 0x10U : 8U)
+                                      : ((0x10U == vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm)
+                                          ? (((vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm 
+                                               >> 4U) 
+                                              & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__buff_wdata__DOT__full_n))
+                                              ? 0x20U
+                                              : 0x10U)
+                                          : ((0x20U 
+                                              == vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm)
+                                              ? 0x40U
+                                              : ((0x40U 
+                                                  == vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm)
+                                                  ? 0x80U
+                                                  : 0x100U)))))))
+            : (((((((((0x100U == vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm) 
+                      | (0x200U == vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm)) 
+                     | (0x400U == vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm)) 
+                    | (0x800U == vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm)) 
+                   | (0x1000U == vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm)) 
+                  | (0x2000U == vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm)) 
+                 | (0x4000U == vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm)) 
+                | (0x8000U == vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm))
+                ? ((0x100U == vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm)
+                    ? 0x200U : ((0x200U == vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm)
+                                 ? (((vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm 
+                                      >> 9U) & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__data_in_out_V_BVALID))
+                                     ? 2U : 0x200U)
+                                 : ((0x400U == vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm)
+                                     ? (((0x400U == (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__i1_0_reg_177)) 
+                                         & (vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm 
+                                            >> 0xaU))
+                                         ? 0x200000U
+                                         : 0x800U) : 
+                                    ((0x800U == vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm)
+                                      ? 0x1000U : (
+                                                   (0x1000U 
+                                                    == vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm)
+                                                    ? 
+                                                   (((vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm 
+                                                      >> 0xcU) 
+                                                     & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rs_rreq__DOT__s_ready_t))
+                                                     ? 0x2000U
+                                                     : 0x1000U)
+                                                    : 
+                                                   ((0x2000U 
+                                                     == vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm)
+                                                     ? 0x4000U
+                                                     : 
+                                                    ((0x4000U 
+                                                      == vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm)
+                                                      ? 0x8000U
+                                                      : 0x10000U)))))))
+                : (((((((((0x10000U == vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm) 
+                          | (0x20000U == vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm)) 
+                         | (0x40000U == vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm)) 
+                        | (0x80000U == vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm)) 
+                       | (0x100000U == vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm)) 
+                      | (0x200000U == vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm)) 
+                     | (0x400000U == vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm)) 
+                    | (0x800000U == vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm))
+                    ? ((0x10000U == vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm)
+                        ? 0x20000U : ((0x20000U == vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm)
+                                       ? 0x40000U : 
+                                      ((0x40000U == vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm)
+                                        ? 0x80000U : 
+                                       ((0x80000U == vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm)
+                                         ? ((1U & (
+                                                   (vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm 
+                                                    >> 0x13U) 
+                                                   & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rs_rdata__DOT__state)))
+                                             ? 0x100000U
+                                             : 0x80000U)
+                                         : ((0x100000U 
+                                             == vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm)
+                                             ? 0x400U
+                                             : ((0x200000U 
+                                                 == vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm)
+                                                 ? 
+                                                (((0x400U 
+                                                   == (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__i2_0_reg_188)) 
+                                                  & (vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm 
+                                                     >> 0x15U))
+                                                  ? 0x800000U
+                                                  : 0x400000U)
+                                                 : 
+                                                ((0x400000U 
+                                                  == vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm)
+                                                  ? 
+                                                 ((1U 
+                                                   & ((~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__icmp_ln883_fu_292_p2)) 
+                                                      & (vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm 
+                                                         >> 0x16U)))
+                                                   ? 0x800000U
+                                                   : 0x200000U)
+                                                  : 1U)))))))
+                    : vlSelf->axi4_tester_inst__DOT____Vxrand_hcc53a3be__0)));
+    vlSelf->__PVT__axi4_tester_inst__DOT__data_in_out_V_ARVALID 
+        = ((vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm 
+            >> 0xcU) & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rs_rreq__DOT__s_ready_t));
+    vlSelf->__PVT__axi4_tester_inst__DOT__data_in_out_V_RREADY 
+        = (1U & ((vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm 
+                  >> 0x13U) & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rs_rdata__DOT__state)));
+    vlSelf->__PVT__axi4_tester_inst__DOT__data_in_out_V_AWVALID 
+        = ((vlSelf->__PVT__axi4_tester_inst__DOT__ap_CS_fsm 
+            >> 3U) & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__rs_wreq__DOT__s_ready_t));
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__pop 
+        = ((~ ((~ (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__data_in_out_V_BREADY)) 
+               & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__data_in_out_V_BVALID))) 
+           & (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__fifo_resp_to_user__DOT__data_vld));
+    __Vtableidx5 = (((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rs2f_rreq_ack) 
+                     << 4U) | (((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rs_rreq__DOT__s_ready_t) 
+                                << 3U) | (((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__data_in_out_V_ARVALID) 
+                                           << 2U) | (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rs_rreq__DOT__state))));
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rs_rreq__DOT__next 
+        = Vtb_axi4_ram_burst__ConstPool__TABLE_he20e718b_0
+        [__Vtableidx5];
+    __Vtableidx7 = (((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__data_in_out_V_RREADY) 
+                     << 4U) | (((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rs_rdata__DOT__s_ready_t) 
+                                << 3U) | (((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rdata_valid_t) 
+                                           << 2U) | (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rs_rdata__DOT__state))));
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_read__DOT__rs_rdata__DOT__next 
+        = Vtb_axi4_ram_burst__ConstPool__TABLE_he20e718b_0
+        [__Vtableidx7];
+    __Vtableidx3 = (((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__rs2f_wreq_ack) 
+                     << 4U) | (((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__rs_wreq__DOT__s_ready_t) 
+                                << 3U) | (((IData)(vlSelf->__PVT__axi4_tester_inst__DOT__data_in_out_V_AWVALID) 
+                                           << 2U) | (IData)(vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__rs_wreq__DOT__state))));
+    vlSelf->__PVT__axi4_tester_inst__DOT__axi4_tester_data_in_out_V_m_axi_U__DOT__bus_write__DOT__rs_wreq__DOT__next 
+        = Vtb_axi4_ram_burst__ConstPool__TABLE_he20e718b_0
+        [__Vtableidx3];
+}
