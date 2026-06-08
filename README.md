@@ -1,19 +1,15 @@
 ﻿# Processor Design (CS 3220)
 
-Processor design coursework with hardware-oriented labs and implementation work around datapaths, control, pipelining, simulation, and processor verification.
+Coursework archive for Georgia Tech CS 3220, including project, lab, homework, and assignment materials kept for undergraduate education documentation.
 
-## Included Materials
+## Source
 
-- Processor labs
-- Hardware design source files
-- Testbenches and validation assets
-
-## Archive Notes
-
-This repository was prepared from a local Georgia Tech coursework folder for documentation and archival purposes. Generated dependency folders, nested Git metadata, local build outputs, compressed archives, and OS metadata were excluded during preparation.
-
-Original local source:
+Original local coursework folder:
 
 ```
 C:\Users\devin\OneDrive\Documents\Georgia_Tech\CS3220
 ```
+
+## Notes
+
+Generated dependency folders, nested Git metadata, local build outputs, archives, and OS metadata were excluded when this repository was prepared.
